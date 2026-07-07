@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Vision Import \u0026 Export",
+  "description": "Premium B2B exporter of 100% natural, ethical horn and bone button blanks and plates manufactured in India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

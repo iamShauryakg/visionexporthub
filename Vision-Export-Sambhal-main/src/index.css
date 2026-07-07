@@ -1,0 +1,1318 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-amber-300: #e2c281;
+  --color-amber-400: #d5b16b;
+  --color-amber-500: #C5A059;
+  --color-amber-600: #b48e47;
+  --color-amber-700: #a27c36;
+
+  --color-surface-base: var(--color-surface-base);
+  --color-text-primary: var(--color-text-primary);
+  --color-surface-secondary: var(--color-surface-secondary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-border-primary: var(--color-border-primary);
+  --color-border-secondary: var(--color-border-secondary);
+}
+
+:root {
+  --color-surface-base: #050507;
+  --color-text-primary: #ffffff;
+  --color-surface-secondary: #0e0e12;
+  --color-text-secondary: #a1a1aa;
+  --color-border-primary: #1e1e24;
+  --color-border-secondary: #27272a;
+}
+
+html.light {
+  --color-surface-base: #ffffff;
+  --color-text-primary: #111827;
+  --color-surface-secondary: #f3f4f6;
+  --color-text-secondary: #4b5563;
+  --color-border-primary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Luxury Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  25% {
+    transform: scale(1.05) translate(2px, -2px);
+  }
+  50% {
+    transform: scale(1.02) translate(-2px, 1px);
+  }
+  75% {
+    transform: scale(1.07) translate(1px, -3px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 24s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes breathing-glow {
+  0%, 100% {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.8), 0 0 28px rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Very slow breathing luxury white border-glow with gold accents from the logo specifically for #product-card-1 on hover */
+#product-card-1 {
+  transition: box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#product-card-1:hover {
+  animation: luxury-breathing-glow-white 6s ease-in-out infinite alternate !important;
+}
+
+@keyframes luxury-breathing-glow-white {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25), 0 0 18px rgba(223, 154, 40, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.9), 0 0 45px rgba(223, 154, 40, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.45), 0 0 24px rgba(223, 154, 40, 0.15), inset 0 0 12px rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Custom WhatsApp Button Style - Uniformly premium solid green with high-contrast white text in both themes */
+.whatsapp-btn {
+  background-color: #10B981 !important; /* Rich, vibrant emerald-500 */
+  border-color: #059669 !important; /* High contrast emerald-600 */
+  color: #FFFFFF !important; /* Perfect contrast white text */
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.whatsapp-btn:hover {
+  background-color: #059669 !important; /* Rich emerald-600 */
+  border-color: #047857 !important; /* Emerald-700 */
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35) !important;
+  transform: translateY(-1px) !important;
+}
+
+.whatsapp-btn span,
+.whatsapp-btn div span,
+.whatsapp-btn svg {
+  color: #FFFFFF !important;
+}
+
+/* Premium Logo Medallion Styling with Golden Glow Hover Effects */
+.logo-medallion {
+  background-color: #000000 !important;
+  border: 2px solid #C5A059 !important;
+  box-shadow: 0 2px 10px rgba(197, 160, 89, 0.15) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.group:hover .logo-medallion {
+  border-color: #F59E0B !important;
+  box-shadow: 0 0 20px rgba(223, 154, 40, 0.55), inset 0 0 8px rgba(223, 154, 40, 0.3) !important;
+  transform: scale(1.05) rotate(5deg) !important;
+}
+
+/* Premium Luxury Gold Button Styling with continuous shine sweep animation */
+.btn-luxury-gold {
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #C5A059 !important;
+  color: #000000 !important;
+  border-color: #C5A059 !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-luxury-gold * {
+  color: #000000 !important;
+}
+
+.btn-luxury-gold:hover {
+  background-color: #dcb36d !important; /* Slightly brighter brand gold */
+  border-color: #dcb36d !important;
+  box-shadow: 0 12px 30px rgba(197, 160, 89, 0.55) !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-luxury-gold::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-luxury-gold:hover::before {
+  left: 150%;
+}
+
+.animate-breathing-glow {
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.animate-breathing-glow:hover {
+  animation: breathing-glow 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+/* Premium noise and tactile luster overlay */
+.premium-noise-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 999;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Luxury white gloss sweep representing natural polished luster */
+@keyframes luxury-luster-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  40%, 100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.premium-luster-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-luster-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(223, 154, 40, 0.15),
+    transparent
+  );
+  transform: translateX(-150%) skewX(-20deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.premium-luster-card:hover::after {
+  animation: luxury-luster-sweep 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Dynamic blueprint grid layout */
+.blueprint-grid {
+  background-image: 
+    linear-gradient(rgba(26, 26, 26, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 26, 26, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ==========================================
+   LUXURIOUS DUAL-THEME HIGH-CONTRAST DESIGN SYSTEM
+   ========================================== */
+
+/* 1. Global Reset & Base Variables */
+:root {
+  --background-system: #050507;
+  --text-system: #FFFFFF;
+  --border-system: rgba(255, 255, 255, 0.08);
+  
+  /* Transition CSS Variables for Standardizing Theme Elements */
+  --transition-speed-normal: 500ms;
+  --transition-speed-fast: 300ms;
+  --transition-curve: cubic-bezier(0.4, 0, 0.2, 1);
+  --theme-bg-transition: background-color var(--transition-speed-normal) var(--transition-curve);
+  --theme-border-transition: border-color var(--transition-speed-normal) var(--transition-curve);
+  --theme-color-transition: color var(--transition-speed-fast) var(--transition-curve);
+  --theme-all-transition: background-color var(--transition-speed-normal) var(--transition-curve),
+                           border-color var(--transition-speed-normal) var(--transition-curve),
+                           color var(--transition-speed-fast) var(--transition-curve),
+                           box-shadow var(--transition-speed-normal) var(--transition-curve),
+                           stroke var(--transition-speed-normal) var(--transition-curve),
+                           fill var(--transition-speed-normal) var(--transition-curve);
+}
+
+/* Apply Standardized Background and Color Transitions using CSS variables */
+body, 
+header, 
+footer, 
+main, 
+section,
+button, 
+a, 
+input, 
+select, 
+textarea,
+div,
+span,
+h1, h2, h3, h4, h5, h6,
+p {
+  transition: var(--theme-all-transition);
+  will-change: background-color, border-color, color;
+}
+
+/* ==========================================
+   DARK THEME: OBSIDIAN BLACK CANVAS (DEFAULT)
+   ========================================== */
+html:not(.light) {
+  &,
+  body,
+  #root,
+  section,
+  main,
+  aside,
+  dialog {
+    background-color: var(--color-surface-base) !important;
+    color: var(--color-text-primary) !important;
+  }
+
+  /* Specific nested card background styling for luxury charcoal contrast */
+  .bg-white,
+  .bg-zinc-50,
+  .bg-zinc-100,
+  .bg-gray-50,
+  .bg-gray-100,
+  .bg-slate-50,
+  .bg-slate-100,
+  .bg-neutral-50,
+  .bg-neutral-100,
+  .bg-amber-50,
+  .bg-amber-50\/50,
+  .bg-amber-50\/10 {
+    background-color: var(--color-surface-secondary) !important;
+  }
+
+  /* Double-layered cards or specific dialogs/popups can be pitch black or slightly lighter */
+  .bg-zinc-950,
+  .bg-black {
+    background-color: var(--color-surface-base) !important;
+  }
+
+  /* Structural dark containers */
+  footer,
+  footer.bg-black,
+  footer.bg-zinc-950 {
+    background-color: var(--color-surface-base) !important;
+    border-top: 1px solid var(--color-border-primary) !important;
+  }
+
+  header,
+  header.bg-black,
+  header.bg-zinc-950 {
+    background-color: var(--color-surface-base) !important;
+    border-bottom: 1px solid var(--color-border-primary) !important;
+  }
+
+  /* Ensure header elements remain light */
+  header,
+  header h1, header h2, header h3, header h4, header h5, header h6,
+  header p,
+  header span,
+  header a,
+  header button {
+    color: #FFFFFF !important;
+  }
+
+  header .text-zinc-400 {
+    color: #A1A1AA !important;
+  }
+
+  header .text-zinc-300 {
+    color: #D4D4D8 !important;
+  }
+
+  header .text-amber-500 {
+    color: #F59E0B !important;
+  }
+
+  header .text-emerald-400 {
+    color: #34D399 !important;
+  }
+
+  header .border-zinc-900 {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  header a:hover {
+    color: #F59E0B !important;
+  }
+
+  #mobile-nav-menu,
+  #mobile-nav-menu.bg-zinc-950 {
+    background-color: rgba(5, 5, 7, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+  }
+
+  /* Scrollbar Track & Thumb to reflect the minimalist dark look */
+  ::-webkit-scrollbar-track {
+    background: #050507 !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272A !important;
+    border-radius: 0px !important; /* Sharp architectural look */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46 !important;
+  }
+
+  /* 3. Text Color Overrides for Pristine White Contrast */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p,
+  span,
+  a,
+  button,
+  label,
+  input,
+  textarea,
+  select,
+  td,
+  th {
+    color: var(--color-text-primary); /* Default color */
+  }
+
+  /* Overriding dark gray and light colors to ensure perfect readability on dark canvas */
+  .text-zinc-950,
+  .text-zinc-900,
+  .text-zinc-850,
+  .text-black {
+    color: var(--color-text-primary) !important;
+  }
+
+  /* Soft contrast for descriptions, subheadings, or secondary labels */
+  .text-zinc-600,
+  .text-zinc-700,
+  .text-zinc-800,
+  .text-zinc-400,
+  .text-zinc-500 {
+    color: var(--color-text-secondary) !important;
+  }
+
+  /* Sharp Architectural Border Overrides (Clean white/gray lines) */
+  *:not(:hover):not(.group:hover *),
+  .border:not(:hover):not(.group:hover *),
+  .border-2:not(:hover):not(.group:hover *),
+  .border-4:not(:hover):not(.group:hover *),
+  .border-t:not(:hover):not(.group:hover *),
+  .border-b:not(:hover):not(.group:hover *),
+  .border-l:not(:hover):not(.group:hover *),
+  .border-r:not(:hover):not(.group:hover *) {
+    border-color: var(--color-border-primary) !important;
+  }
+
+  /* Ensure bright borders on focus or active modes */
+  .border-amber-500,
+  .border-amber-500\/30 {
+    border-color: #C5A059 !important;
+  }
+
+  /* Custom Button & Link Contrast Resets (Keep solid white buttons legible) */
+  button.bg-white,
+  a.bg-white,
+  button[class*="bg-white"],
+  a[class*="bg-white"] {
+    background-color: #FFFFFF !important;
+    color: #050507 !important;
+  }
+
+  button.bg-white *,
+  a.bg-white * {
+    color: #050507 !important;
+  }
+
+  /* Gradients & Overlays (Restore mysterious dark luxury gradients) */
+  .from-black,
+  .from-zinc-950, 
+  .via-black,
+  .to-[#050507] {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), #050507) !important;
+  }
+
+  /* Custom background for slider image container overlay */
+  .absolute.inset-0.bg-gradient-to-b {
+    background: linear-gradient(to bottom, rgba(5, 5, 7, 0.1) 0%, rgba(5, 5, 7, 0.95) 100%) !important;
+  }
+
+  /* Double-Offset Solid Shadows */
+  [class*="shadow-"] {
+    box-shadow: none !important;
+  }
+
+  [class*="shadow-[10px_10px_0px_0px_rgba(255,255,255,1)]"] {
+    box-shadow: 10px 10px 0px 0px #FFFFFF !important;
+  }
+
+  [class*="shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"] {
+    box-shadow: 4px 4px 0px 0px #FFFFFF !important;
+  }
+
+  /* Elegant shadow for premium visual elements (images/dialogs) */
+  .elegant-image-shadow {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6) !important;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) !important;
+  }
+
+  /* Premium high-contrast typography refinements for legal and technical pages */
+  .legal-page,
+  .technical-page,
+  .legal-content-area,
+  .technical-content-area {
+    line-height: 1.85 !important;
+    letter-spacing: 0.02em !important;
+    color: #D4D4D8 !important;
+  }
+
+  .legal-page h1, .legal-page h2, .legal-page h3, .legal-page h4,
+  .technical-page h1, .technical-page h2, .technical-page h3, .technical-page h4 {
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.4 !important;
+  }
+
+  .legal-page p, .technical-page p,
+  .legal-page li, .technical-page li {
+    font-weight: 500 !important;
+    color: #D4D4D8 !important;
+  }
+
+  .legal-page strong, .technical-page strong {
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+  }
+}
+
+/* ==========================================
+   LIGHT THEME: COUTURE PURE ALABASTER CANVAS
+   ========================================== */
+
+/* 1. Base Structure & Background Resets */
+html.light,
+html.light body,
+html.light #root {
+  background-color: var(--color-surface-base) !important;
+  color: var(--color-text-primary) !important;
+}
+
+html.light main,
+html.light section,
+html.light footer,
+html.light header {
+  background-color: var(--color-surface-base) !important;
+}
+
+/* 2. Specific Nested Containers & Dark Class Overrides */
+/* Only turn major sections, wrappers, and default dark panels into pure white */
+html.light section,
+html.light main,
+html.light footer,
+html.light header,
+html.light .section-container,
+html.light .bg-\[\#050507\],
+html.light .bg-\[\#070709\],
+html.light .bg-\[\#08080a\],
+html.light .bg-\[\#08080A\],
+html.light .bg-\[\#09090c\],
+html.light .bg-\[\#09090C\],
+html.light .bg-\[\#13131a\],
+html.light .bg-\[\#13131A\] {
+  background-color: var(--color-surface-base) !important;
+}
+
+/* Overriding cards and details to use white backgrounds with subtle slate borders */
+html.light .bg-\[\#0e0e12\],
+html.light .bg-\[\#0E0E12\],
+html.light .bg-\[\#0c0c10\],
+html.light .bg-\[\#0C0C10\],
+html.light .bg-zinc-900,
+html.light .bg-zinc-850,
+html.light .bg-zinc-800 {
+  background-color: #FFFFFF !important;
+  border-color: #E5E7EB !important;
+}
+
+/* Ensure true dark elements (active tabs, solid primary dark buttons, custom keep-dark nodes) stay dark */
+html.light .keep-dark,
+html.light .active-tab-dark,
+html.light .bg-zinc-950:not(section):not(div.section-bg):not(main):not(.section-container),
+html.light .bg-black:not(section):not(footer):not(header):not(main) {
+  background-color: #111827 !important;
+  color: #FFFFFF !important;
+}
+
+html.light .keep-dark *,
+html.light .active-tab-dark *,
+html.light .bg-zinc-950:not(section):not(div.section-bg):not(main):not(.section-container) *,
+html.light .bg-black:not(section):not(footer):not(header):not(main) * {
+  color: #FFFFFF !important;
+}
+
+/* Nested cards/inputs with a subtle contrast can use a soft light-gray instead of pure white */
+html.light .bg-zinc-900\/50,
+html.light .bg-zinc-900\/40,
+html.light .bg-zinc-950\/40,
+html.light .bg-black\/20,
+html.light .bg-zinc-900\/10,
+html.light .bg-zinc-900\/5,
+html.light .bg-zinc-800\/10,
+html.light .bg-zinc-800\/20,
+html.light .bg-zinc-800\/30,
+html.light .bg-amber-950\/40 {
+  background-color: #F9FAFB !important; /* Premium off-white gray */
+}
+
+/* 3. Text Color & Contrast Overrides */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6,
+html.light p,
+html.light span,
+html.light a,
+html.light button,
+html.light label,
+html.light input,
+html.light textarea,
+html.light select,
+html.light li,
+html.light td,
+html.light th {
+  color: #111827;
+}
+
+/* Target all Tailwind-generated white/light text classes explicitly */
+html.light .text-white,
+html.light .text-zinc-50,
+html.light .text-zinc-100,
+html.light .text-zinc-200,
+html.light .text-zinc-300,
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-slate-300,
+html.light .text-neutral-100,
+html.light .text-neutral-200 {
+  color: #111827 !important;
+}
+
+/* Target all Tailwind-generated gray text classes explicitly for secondary text */
+html.light .text-zinc-400,
+html.light .text-zinc-500,
+html.light .text-zinc-600,
+html.light .text-slate-400,
+html.light .text-slate-500,
+html.light .text-neutral-400,
+html.light .text-neutral-500 {
+  color: #4B5563 !important; /* Pristine high-contrast slate gray */
+}
+
+/* Ensure brand color works with high readability in light mode */
+html.light .text-amber-400,
+html.light .text-amber-500 {
+  color: #C5A059 !important; /* Brand Gold */
+}
+
+html.light .text-emerald-400 {
+  color: #047857 !important; /* Emerald 700 */
+}
+
+/* 4. Border & Line Overrides */
+html.light .border:not(:hover):not(.group:hover *),
+html.light .border-2:not(:hover):not(.group:hover *),
+html.light .border-4:not(:hover):not(.group:hover *),
+html.light .border-t:not(:hover):not(.group:hover *),
+html.light .border-b:not(:hover):not(.group:hover *),
+html.light .border-l:not(:hover):not(.group:hover *),
+html.light .border-r:not(:hover):not(.group:hover *),
+html.light .border-zinc-800:not(:hover):not(.group:hover *),
+html.light .border-zinc-900:not(:hover):not(.group:hover *),
+html.light .border-zinc-700:not(:hover):not(.group:hover *),
+html.light .border-zinc-600:not(:hover):not(.group:hover *),
+html.light .border-zinc-500:not(:hover):not(.group:hover *) {
+  border-color: #E5E7EB !important; /* Clean light gray borders */
+}
+
+/* Keep active/golden/green borders colorful */
+html.light .border-amber-500,
+html.light .border-amber-500\/30,
+html.light .border-amber-500\/40,
+html.light .border-amber-500\/20 {
+  border-color: #C5A059 !important;
+}
+
+html.light .border-emerald-800,
+html.light .border-emerald-500,
+html.light .border-emerald-600 {
+  border-color: #059669 !important;
+}
+
+/* 5. Hero & Specimen Configurator Gradients & Overlays */
+html.light #home .bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.75) 50%, #FFFFFF 100%) !important;
+}
+
+html.light #home .bg-gradient-to-r {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, transparent 50%, rgba(255, 255, 255, 0.65) 100%) !important;
+}
+
+html.light #home .opacity-\[0\.05\],
+html.light #specimen-config .opacity-\[0\.08\] {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px) !important;
+  opacity: 1 !important;
+}
+
+html.light #specimen-config .bg-gradient-to-r {
+  background-image: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%) !important;
+}
+
+html.light #specimen-config .bg-gradient-to-t {
+  background-image: linear-gradient(to top, #FFFFFF 0%, transparent 50%, rgba(255, 255, 255, 0.5) 100%) !important;
+}
+
+html.light .absolute.inset-0.bg-gradient-to-b {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+}
+
+/* 6. Header & Mobile Menu Overrides */
+html.light header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+html.light header a:hover {
+  color: #C5A059 !important;
+}
+
+html.light #mobile-nav-menu {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* 7. Button & Interactive Component Styling */
+/* Premium B2B WhatsApp Desk Button in Header (Solid, high-contrast, emerald-600) */
+html.light .whatsapp-btn {
+  background-color: #10B981 !important; /* Pure solid Emerald 500 */
+  border-color: #059669 !important; /* Emerald 600 */
+  color: #FFFFFF !important; /* Perfect contrast white text */
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
+}
+
+html.light .whatsapp-btn:hover {
+  background-color: #059669 !important; /* Emerald 600 */
+  border-color: #047857 !important; /* Emerald 700 */
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+html.light .whatsapp-btn span,
+html.light .whatsapp-btn div span,
+html.light .whatsapp-btn svg {
+  color: #FFFFFF !important;
+}
+
+/* Specific buttons with standard background colors */
+html.light a.bg-white,
+html.light button.bg-white {
+  background-color: #111827 !important; /* Turn white buttons black in light mode */
+  color: #FFFFFF !important;
+}
+
+html.light a.bg-white *,
+html.light button.bg-white * {
+  color: #FFFFFF !important;
+}
+
+/* Keep text white/light for components that must stay dark or colored in light mode */
+html.light .bg-emerald-600,
+html.light .bg-emerald-700,
+html.light .bg-emerald-800,
+html.light .bg-emerald-950\/40,
+html.light .whatsapp-btn,
+html.light .btn-luxury-gold,
+html.light button.bg-zinc-950,
+html.light button.bg-black,
+html.light a.bg-zinc-950,
+html.light a.bg-black,
+html.light .keep-white,
+html.light .keep-white * {
+  color: #FFFFFF !important;
+}
+
+html.light .bg-emerald-600 *,
+html.light .bg-emerald-700 *,
+html.light .bg-emerald-800 *,
+html.light .bg-emerald-950\/40 *,
+html.light .whatsapp-btn *,
+html.light .btn-luxury-gold * {
+  color: #FFFFFF !important;
+}
+
+/* Standard Outline Buttons (like Specimen Analyzer) */
+html.light a.border-zinc-800,
+html.light button.border-zinc-800,
+html.light a.border-zinc-700,
+html.light button.border-zinc-700 {
+  border-color: #D1D5DB !important;
+  color: #111827 !important;
+  background-color: #FFFFFF !important; /* Solid background so background photos do not bleed through */
+}
+
+html.light a.border-zinc-800:hover,
+html.light button.border-zinc-800:hover,
+html.light a.border-zinc-700:hover,
+html.light button.border-zinc-700:hover {
+  background-color: #F9FAFB !important;
+  border-color: #C5A059 !important;
+}
+
+html.light a.border-zinc-800 *,
+html.light button.border-zinc-800 *,
+html.light a.border-zinc-700 *,
+html.light button.border-zinc-700 * {
+  color: #111827 !important;
+}
+
+/* Slider Track, Ranges, and Overrides */
+html.light input[type="range"] {
+  background-color: #E5E7EB !important;
+}
+
+html.light .bg-zinc-800 {
+  background-color: #E5E7EB !important;
+}
+
+html.light .bg-zinc-800:hover {
+  background-color: #D1D5DB !important;
+}
+
+/* Forms, Inputs, & Dropdowns in Light mode */
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D1D5DB !important;
+}
+
+html.light select option {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+}
+
+/* RFQ Basket Modal & Overlays */
+html.light .rfq-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Scrollbar Style for Light Mode */
+html.light ::-webkit-scrollbar-track {
+  background: #FFFFFF !important;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #E5E7EB !important;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB !important;
+}
+
+/* Slider Card background and shadow resets */
+html.light #specimen-config .bg-\[\#09090c\],
+html.light #specimen-config .bg-\[\#09090C\] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dynamic Specimen Analyzer transparent border button hover logic */
+html.light button.hover\:bg-zinc-900:hover {
+  background-color: rgba(18, 18, 20, 0.05) !important;
+  color: #121214 !important;
+}
+
+/* Double-Offset Solid Shadows in Light Mode: crisp obsidian shadow outlines */
+html.light [class*="shadow-"] {
+  box-shadow: none !important;
+}
+
+html.light [class*="shadow-[10px_10px_0px_0px_rgba(255,255,255,1)]"] {
+  box-shadow: 10px 10px 0px 0px #121214 !important;
+}
+
+html.light [class*="shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"] {
+  box-shadow: 4px 4px 0px 0px #121214 !important;
+}
+
+/* Elegant shadow for premium visual elements (images/dialogs) */
+html.light .elegant-image-shadow {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08)) !important;
+}
+
+/* Premium typography refinements for light modes */
+html.light .legal-page,
+html.light .technical-page,
+html.light .legal-content-area,
+html.light .technical-content-area {
+  line-height: 1.85 !important;
+  letter-spacing: 0.02em !important;
+  color: #3F3F46 !important;
+}
+
+html.light .legal-page h1,
+html.light .legal-page h2,
+html.light .legal-page h3,
+html.light .legal-page h4,
+html.light .technical-page h1,
+html.light .technical-page h2,
+html.light .technical-page h3,
+html.light .technical-page h4 {
+  font-weight: 800 !important;
+  color: #121214 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.4 !important;
+}
+
+html.light .legal-page p,
+html.light .technical-page p,
+html.light .legal-page li,
+html.light .technical-page li {
+  font-weight: 500 !important;
+  color: #3F3F46 !important;
+}
+
+html.light .legal-page strong,
+html.light .technical-page strong {
+  font-weight: 700 !important;
+  color: #121214 !important;
+}
+
+/* Screen hidden for printable specs */
+#printable-spec-sheet {
+  display: none !important;
+}
+
+@media print {
+  /* Hide everything on screen by default */
+  body * {
+    visibility: hidden !important;
+  }
+  
+  /* Set body background to solid white for perfect print contrast */
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  
+  /* Force display of only the printable spec sheet and its nested descendants */
+  #printable-spec-sheet,
+  #printable-spec-sheet * {
+    visibility: visible !important;
+  }
+  
+  /* Set positioning and layouts of the printable sheet */
+  #printable-spec-sheet {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #FFFFFF !important;
+    color: #050507 !important;
+    padding: 32px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 9999999 !important;
+  }
+
+  /* Ensure grid and flex containers render their proper layouts inside the printed sheet */
+  #printable-spec-sheet .grid {
+    display: grid !important;
+  }
+  #printable-spec-sheet .flex {
+    display: flex !important;
+  }
+  #printable-spec-sheet .inline-block {
+    display: inline-block !important;
+  }
+  #printable-spec-sheet .hidden {
+    display: none !important;
+  }
+
+  /* Retain exact colors, custom borders, and typography ratios for the printed document */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Custom styles for Material Select Buttons in 3D Showroom - Fixes mismatched white/black button states */
+.mat-selector-btn {
+  background-color: #0c0c10 !important;
+  color: #a1a1aa !important;
+  border-color: #1f1f23 !important;
+}
+
+.mat-selector-btn:hover {
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  color: #FFFFFF !important;
+}
+
+.mat-selector-btn.selected {
+  background-color: #111827 !important;
+  color: #FFFFFF !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.1) !important;
+}
+
+html.light .mat-selector-btn {
+  background-color: #F9FAFB !important;
+  color: #4B5563 !important;
+  border-color: #E5E7EB !important;
+}
+
+html.light .mat-selector-btn:hover {
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  color: #111827 !important;
+}
+
+html.light .mat-selector-btn.selected {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.15) !important;
+}
+
+/* Specimen Lab Buttons - Always solid black background with white/gold text and supreme contrast in both modes */
+.specimen-lab-btn {
+  background-color: #0d0d12 !important;
+  color: #FFFFFF !important;
+  border-color: #1f1f24 !important;
+}
+
+.specimen-lab-btn:hover {
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  background-color: #13131a !important;
+}
+
+.specimen-lab-btn.selected {
+  background-color: #050507 !important;
+  color: #FFFFFF !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.specimen-lab-btn .lab-btn-subtitle {
+  color: #C5A059 !important;
+}
+
+.specimen-lab-btn .lab-btn-title {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+.specimen-lab-btn .lab-btn-meta {
+  color: #9CA3AF !important;
+}
+
+.specimen-lab-btn .lab-btn-action {
+  color: #9CA3AF !important;
+}
+
+.specimen-lab-btn.selected .lab-btn-action {
+  color: #C5A059 !important;
+}
+
+/* Custom premium outline luxury button style */
+.btn-outline-luxury {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-luxury:hover {
+  border-color: #C5A059 !important;
+  background-color: rgba(197, 160, 89, 0.08) !important;
+  color: #C5A059 !important;
+}
+
+html.light .btn-outline-luxury {
+  border: 1px solid rgba(17, 24, 39, 0.2) !important;
+  background-color: transparent !important;
+  color: #111827 !important;
+}
+
+html.light .btn-outline-luxury:hover {
+  border-color: #C5A059 !important;
+  background-color: rgba(197, 160, 89, 0.08) !important;
+  color: #C5A059 !important;
+}
+
+/* Light mode overrides for Specimen Lab Buttons */
+html.light .specimen-lab-btn {
+  background-color: #F3F4F6 !important;
+  color: #111827 !important;
+  border-color: #E5E7EB !important;
+}
+
+html.light .specimen-lab-btn:hover {
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  background-color: #E5E7EB !important;
+}
+
+html.light .specimen-lab-btn.selected {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 10px 25px rgba(197, 160, 89, 0.1) !important;
+}
+
+html.light .specimen-lab-btn .lab-btn-subtitle {
+  color: #C5A059 !important;
+}
+
+html.light .specimen-lab-btn .lab-btn-title {
+  color: #111827 !important;
+}
+
+html.light .specimen-lab-btn .lab-btn-meta {
+  color: #4B5563 !important;
+}
+
+html.light .specimen-lab-btn .lab-btn-action {
+  color: #4B5563 !important;
+}
+
+html.light .specimen-lab-btn.selected .lab-btn-action {
+  color: #C5A059 !important;
+}
+
+/* Light mode overrides to keep text elements white inside dark bg-zinc-950 and bg-zinc-900 buttons/links */
+html.light .bg-zinc-950 .text-zinc-300,
+html.light .bg-zinc-950 .text-zinc-200,
+html.light .bg-zinc-950 .text-zinc-100,
+html.light .bg-zinc-950 .text-white,
+html.light .bg-zinc-900 .text-zinc-300,
+html.light .bg-zinc-900 .text-zinc-200,
+html.light .bg-zinc-900 .text-zinc-100,
+html.light .bg-zinc-900 .text-white,
+html.light button.bg-zinc-950,
+html.light button.bg-zinc-950 *,
+html.light a.bg-zinc-950,
+html.light a.bg-zinc-950 * {
+  color: #FFFFFF !important;
+}
+
+/* Light mode overrides for Raw Materials section nested elements */
+html.light #raw-materials .h-1.bg-zinc-900 {
+  background-color: #E5E7EB !important;
+}
+
+html.light #raw-materials .bg-surface-base {
+  background-color: #F9FAFB !important;
+  border-color: #E5E7EB !important;
+}
+
+html.light #raw-materials input[type="range"] {
+  background-color: #E5E7EB !important;
+}
+
+html.light #raw-materials .border-zinc-900\/80,
+html.light #raw-materials .border-zinc-900,
+html.light #raw-materials .border-zinc-800 {
+  border-color: #E5E7EB !important;
+}
+
+/* Light mode overrides for Hero Slider Specimen Configurator */
+html.light #specimen-config .bg-zinc-950\/30,
+html.light #specimen-config .bg-zinc-900\/30 {
+  background-color: #F3F4F6 !important;
+  border-color: #E5E7EB !important;
+}
+
+html.light #specimen-config .bg-zinc-950\/70,
+html.light #specimen-config .bg-zinc-900\/70 {
+  background-color: #F3F4F6 !important;
+  border-color: #E5E7EB !important;
+}
+
+html.light #specimen-config .text-white {
+  color: #111827 !important;
+}
+
+html.light #specimen-config .text-zinc-300 {
+  color: #374151 !important;
+}
+
+html.light #specimen-config .text-zinc-400 {
+  color: #4B5563 !important;
+}
+
+html.light #specimen-config .text-zinc-500 {
+  color: #6B7280 !important;
+}
+
+html.light #specimen-config .bg-amber-500\/10 {
+  background-color: rgba(197, 160, 89, 0.08) !important;
+  border-color: rgba(197, 160, 89, 0.5) !important;
+}
+
+html.light #specimen-config .bg-amber-500\/10 .text-amber-500 {
+  color: #B45309 !important;
+}
+
+html.light #specimen-config .bg-white {
+  background-color: #111827 !important;
+  color: #FFFFFF !important;
+}
+
+html.light #specimen-config .bg-white:hover {
+  background-color: #C5A059 !important;
+  color: #111827 !important;
+}
+
+/* Spec Panel Tabs styling to ensure perfect readability in both light & dark themes */
+.spec-tab-container {
+  background-color: #000000 !important;
+  border: 1px solid #27272a !important;
+  padding: 4px !important;
+}
+
+html.light .spec-tab-container {
+  background-color: #f4f4f5 !important;
+  border: 1px solid #e4e4e7 !important;
+}
+
+.spec-tab-btn {
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Inactive button styles - Dark Theme */
+.spec-tab-btn-inactive {
+  background-color: transparent !important;
+  color: #a1a1aa !important; /* light gray/zinc-400 */
+}
+
+.spec-tab-btn-inactive:hover {
+  background-color: #18181b !important; /* zinc-900 */
+  color: #ffffff !important;
+}
+
+/* Active button styles - Dark Theme */
+.spec-tab-btn-active {
+  background-color: #f59e0b !important; /* amber-500 */
+  color: #000000 !important; /* solid black text */
+  font-weight: 800 !important;
+}
+
+/* Inactive button styles - Light Theme */
+html.light .spec-tab-btn-inactive {
+  background-color: transparent !important;
+  color: #52525b !important; /* zinc-600 - very readable on light-gray background */
+}
+
+html.light .spec-tab-btn-inactive:hover {
+  background-color: #e4e4e7 !important; /* zinc-200 */
+  color: #111827 !important;
+}
+
+/* Active button styles - Light Theme */
+html.light .spec-tab-btn-active {
+  background-color: #111827 !important; /* Deep dark slate background */
+  color: #ffffff !important; /* Pristine white text on dark background */
+  font-weight: 800 !important;
+}
+
+/* General Premium Gold Hover Glow */
+button:not(.spec-tab-btn), 
+.btn-luxury-gold, 
+.whatsapp-btn, 
+.mat-selector-btn,
+.specimen-lab-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+button:not(.spec-tab-btn):hover,
+.whatsapp-btn:hover,
+.mat-selector-btn:hover,
+.specimen-lab-btn:hover {
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.4) !important;
+  border-color: #C5A059 !important;
+}
+
+
+
