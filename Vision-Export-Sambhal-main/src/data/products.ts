@@ -7,14 +7,19 @@ import Buffolo5 from "../images/Buffalo Button/23MM.png"
 import Buffolo6 from "../images/Buffalo Button/26MM.png"
 import Buffolo7 from "../images/Buffalo Button/29MM.png"
 import Buffolo8 from "../images/Buffalo Button/31MM.png"
-import cattleHorn1 from "../images/Button blanks/Cattle Color Button/Color No 1.png"
-import cattleHorn2 from "../images/Button blanks/Cattle Color Button/Color No 2.png"
-import cattleHorn3 from "../images/Button blanks/Cattle Color Button/Dark Pink.png"
-import cattleHorn4 from "../images/Button blanks/Cattle Color Button/Light Pink.png"
-import cattleHorn5 from "../images/Cattle Button/5.png"
-import cattleHorn6 from "../images/Cattle Button/6.png"
-import cattleHorn7 from "../images/Cattle Button/7.png"
-import cattleHorn8 from "../images/Cattle Button/8.png"
+import CattleHorn1 from "../images/Button blanks/Cattle Color Button/Color No 3.png"
+import CattleHorn2 from "../images/Button blanks/Cattle Color Button/Color No 2.png"
+import CattleHorn3 from "../images/Button blanks/Cattle Color Button/Color No 5.png"
+import DarkPink1 from "../images/Button blanks/Cattle Color Button/Dark Pink.png"
+import DarkPink2 from "../images/Button blanks/Cattle Color Button/dark pink1.png"
+import LightPink from "../images/Button blanks/Cattle Color Button/Light Pink.png"
+import LightPink1 from "../images/Button blanks/Cattle Color Button/Light Pink1.png"
+import MediumPink from "../images/Button blanks/Cattle Color Button/Medium Pink.png"
+import BuffaloPlate from "../images/Horn and Bone Plates/Buffalo Black plate/Buffalo plate.png"
+import BuffaloPlate1 from "../images/Horn and Bone Plates/Buffalo Black plate/Buffalo plate1.png"
+import BonePlate1 from "../images/Horn and Bone Plates/Bone Plate/Bone Plate.png"
+import BonePlate2 from "../images/Horn and Bone Plates/Bone Plate/Bone Plate2.png"
+
 import bone_button1 from "../images/Button blanks/Bone Button blanks/1.png"
 import bone_button2 from "../images/Button blanks/Bone Button blanks/2.png"
 
@@ -31,7 +36,7 @@ export const PRODUCTS: Product[] = [
     name: "Buffalo Horn Button Blanks (12mm-31mm)",
     category: "Button Blanks",
     dimensions: "12mm - 31mm (Custom thickness options: 2mm to 6mm)",
-    material: "Water Buffalo Horn (Bubalus bubalis)",
+    material: "Buffalo Horn (Bubalus bubalis)",
     origin: "Sambhal, India (Global Craft Hub)",
     description: "Superior strength and classic deep black tones, selectively marbled. Features high-temperature tolerance and pristine surface smoothness designed for premium suiting and bespoke overcoats.",
     texture: "High-gloss polish, dense structural fibers, natural dark variations.",
@@ -214,39 +219,40 @@ export const getProductImages = (product: Product) => {
     } else if (product.grainPattern === "Blush Rose Hue") {
       images.push({
         type: "photo",
-        url: cattleHorn1,
+        url: LightPink,
         label: "Blush Rose Suit Fabric Context"
       });
       images.push({
         type: "photo",
-        url: cattleHorn2,
+        url: CattleHorn3,
         label: "Delicate Pastel Rose Finish"
       }); 
       images.push({
         type: "photo",
-        url: cattleHorn6,
+        url: LightPink1,
+        // url: CattleHorn6,
         label: "Quality Craft Workbench"
       });
       } else if (product.grainPattern === "Rosy Magenta Hue") {
       images.push({
         type: "photo",
-        url: Buffolo3,
+        url: MediumPink,
         label: "Vibrant Rosy Magenta Textiles"
       });
       images.push({
         type: "photo",
-        url: cattleHorn2,
+        url: CattleHorn1,
         label: "Deep Hand-Polished Magenta Grain"
       });
     } else if (product.grainPattern === "Crimson Rose Hue") {
       images.push({
         type: "photo",
-        url: cattleHorn3,
+        url: DarkPink1,
         label: "Bespoke Crimson Fabric Backdrop"
       });
       images.push({
         type: "photo",
-        url: cattleHorn4,
+        url: DarkPink2,
         label: "Deep Hand-Polished Magenta Grain"
       });
     } else if (product.grainPattern === "Crimson Rose Hue") {
@@ -263,12 +269,12 @@ export const getProductImages = (product: Product) => {
     } else if (product.grainPattern === "Earthy Dyed Tones") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80",
+        url: CattleHorn1,
         label: "Earthy Brown Crafted Specimen"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
+        url: CattleHorn2,
         label: "Swirling Amber Natural Veins"
       });
     } else {
@@ -287,23 +293,23 @@ export const getProductImages = (product: Product) => {
     if (product.grainPattern === "Polished Obsidian") {
       images.push({
         type: "photo",
-        url: cattleHorn7,
+        url: BuffaloPlate,
         label: "Polished Obsidian Horn Plate"
       });
       images.push({
         type: "photo",
-        url: cattleHorn8,
+        url: BuffaloPlate1,
         label: "Flat-Shaved Black Horn Slab"
       });
     } else if (product.grainPattern === "Speckled White & Onyx") {
       images.push({
         type: "photo",
-        url: whitespot1,
+        url: BonePlate2,
         label: "Spotted Onyx Plate Specimen"
       });
       images.push({
         type: "photo",
-        url: whitespot2,
+        url: BonePlate1,
         label: "Speckled White Marble Core Plate"
       });
     } else {

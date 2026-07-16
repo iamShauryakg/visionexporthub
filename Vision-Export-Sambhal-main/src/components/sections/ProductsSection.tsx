@@ -258,9 +258,9 @@ function ProductCard({
             <span className={isPolished ? "text-zinc-400" : "text-zinc-500"}>
               {product.category.toUpperCase()}
             </span>
-            <span className="text-amber-600 font-black tracking-wider">
+            {/* <span className="text-amber-600 font-black tracking-wider">
               LOT #SH-00{product.id}
-            </span>
+            </span> */}
           </div>
 
           {/* Product Title */}
