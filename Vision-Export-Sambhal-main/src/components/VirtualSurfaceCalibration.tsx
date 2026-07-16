@@ -3,8 +3,8 @@ import React from "react";
 interface VirtualSurfaceCalibrationProps {
   productId: number;
   productName: string;
-  productFinish: "matte" | "high-polish" | "natural-grain";
-  setProductFinish: (finish: "matte" | "high-polish" | "natural-grain") => void;
+  productFinish: "Natural" | "high-polish" | "natural color atta";
+  setProductFinish: (finish: "Natural" | "high-polish" | "natural color atta") => void;
   showToast: (message: string) => void;
 }
 
@@ -28,23 +28,23 @@ export default function VirtualSurfaceCalibration({
       </p>
 
       <div className="space-y-2.5 pt-2">
-        {/* Matte */}
+        {/* Natural Finish */}
         <button
           onClick={() => {
-            setProductFinish("matte");
-            showToast(`SUCCESS: Configured Matte finish for ${productName}!`);
+            setProductFinish("Natural");
+            showToast(`SUCCESS: Configured Natural finish for ${productName}!`);
           }}
           className={`w-full p-3.5 text-left border-2 transition-all rounded-none flex items-center justify-between cursor-pointer ${
-            productFinish === "matte"
+            productFinish === "Natural"
               ? "bg-zinc-950 text-white border-zinc-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.15)] font-black"
               : "bg-white text-zinc-600 border-zinc-200 hover:border-zinc-950 hover:text-zinc-950"
           }`}
         >
           <div>
-            <span className="text-xs sm:text-sm font-mono font-bold block uppercase">🪨 MATTE FINISH</span>
+            <span className="text-xs sm:text-sm font-mono font-bold block uppercase">🪨 Natural FINISH</span>
             <span className="text-xs text-zinc-400 font-semibold block mt-0.5">Raw organic velvet texture</span>
           </div>
-          {productFinish === "matte" && <span className="text-sm font-black">✓</span>}
+          {productFinish === "Natural" && <span className="text-sm font-black">✓</span>}
         </button>
 
         {/* High Polish */}
@@ -69,20 +69,20 @@ export default function VirtualSurfaceCalibration({
         {/* Natural Grain */}
         <button
           onClick={() => {
-            setProductFinish("natural-grain");
-            showToast(`SUCCESS: Configured Natural Grain finish for ${productName}!`);
+            setProductFinish("natural color atta");
+            showToast(`SUCCESS: Configured Natural Color Atta finish for ${productName}!`);
           }}
           className={`w-full p-3.5 text-left border-2 transition-all rounded-none flex items-center justify-between cursor-pointer ${
-            productFinish === "natural-grain"
+            productFinish === "natural color atta"
               ? "bg-emerald-50 text-emerald-800 border-emerald-500 shadow-[3px_3px_0px_0px_rgba(16,185,129,0.15)] font-black"
               : "bg-white text-zinc-600 border-zinc-200 hover:border-zinc-950 hover:text-zinc-950"
           }`}
         >
           <div>
-            <span className="text-xs sm:text-sm font-mono font-bold block uppercase">🌾 NATURAL GRAIN</span>
+            <span className="text-xs sm:text-sm font-mono font-bold block uppercase">🌾 NATURAL COLOR ATTA</span>
             <span className="text-xs text-emerald-600/80 font-semibold block mt-0.5">Exposes fine fibrous structure</span>
           </div>
-          {productFinish === "natural-grain" && <span className="text-sm font-black">✓</span>}
+          {productFinish === "natural color atta" && <span className="text-sm font-black">✓</span>}
         </button>
       </div>
     </div>

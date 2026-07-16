@@ -1,20 +1,26 @@
 import { HeroSlide, Hero3DMaterial, VisionGalleryItem, PartnerBrand, ArchitectureSpec, ManufacturingStep, Testimonial, FAQItem } from "../types";
+import rawimage1 from "../images/Manufacture/file_00000000dbac71fa81a0b8c3a0687fe9.png";
+import rawimage2 from "../images/Manufacture/file_00000000204072079b844f051a6da486.png";
+import rawimage3 from "../images/Manufacture/IMG-20260619-WA0004.jpg";
+import Heroimage1 from "../images/heroIMG/hero.png";
+import Heroimage2 from "../images/heroIMG/hero2.png";
+import Heroimage3 from "../images/heroIMG/hero3.png";
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=1920&q=80",
+    image: Heroimage1,
     title: "GLOBAL REACH. SUSTAINABLE LUXURY.",
     subtitle: "PREMIUM NATURAL ARTISANRY • SAMBHAL, INDIA",
     description: "Ethically sourced water buffalo horn and bovine bone button blanks, expertly crafted in Sambhal, India for world-class haute couture brands."
   },
   {
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80",
+    image: Heroimage2,
     title: "DESIGNED FOR HAUTE COUTURE.",
     subtitle: "WORLD-CLASS TAILORING MATERIAL SUPPLY",
     description: "Calibrated material supplies engineered specifically for elite suiting, bespoke tailors, and heritage luxury labels worldwide."
   },
   {
-    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=1920&q=80",
+    image: Heroimage3,
     title: "ETHICAL BY-PRODUCT HERITAGE.",
     subtitle: "100% ORGANIC & CRUELTY-FREE CERTIFIED",
     description: "100% natural, traceable, and organic biological materials collected strictly as certified cruelty-free agricultural by-products."
@@ -77,21 +83,21 @@ export const HERO_3D_MATERIALS: Hero3DMaterial[] = [
 
 export const VISION_GALLERY_ITEMS: VisionGalleryItem[] = [
   {
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+    image: rawimage1,
     title: "Precision Lathe Shaving",
     step: "01",
     subtitle: "CALIBER CONTROL",
     description: "Raw ethically sourced buffalo horn cores are sliced into uniform sheets, then precision center-stamped using state-of-the-art diamond tip cutters to guarantee circular diameter consistency down to ±0.15mm."
   },
   {
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+    image: rawimage2,
     title: "Double-Sided Fine Polishing",
     step: "02",
     subtitle: "ORGANIC GLOSS LUSTER",
     description: "Each individual button blank and flat plate is buffed over high-speed linen wheel spindles. Utilizing natural wood waxes, our craftsmen slowly reveal the complex internal marbled swirls without adding artificial synthetics."
   },
   {
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    image: rawimage3,
     title: "Strict Micro-Gauge Audit",
     step: "03",
     subtitle: "EXPORT EXCELLENCE",

@@ -1,4 +1,29 @@
 import { Product } from "../types";
+import Buffolo1 from "../images/Buffalo Button/12MM & 14MM.png"
+import Buffolo2 from "../images/Buffalo Button/16MM.png"
+import Buffolo3 from "../images/Buffalo Button/19MM.png"
+import Buffolo4 from "../images/Buffalo Button/21MM.png"
+import Buffolo5 from "../images/Buffalo Button/23MM.png"
+import Buffolo6 from "../images/Buffalo Button/26MM.png"
+import Buffolo7 from "../images/Buffalo Button/29MM.png"
+import Buffolo8 from "../images/Buffalo Button/31MM.png"
+import cattleHorn1 from "../images/Button blanks/Cattle Color Button/Color No 1.png"
+import cattleHorn2 from "../images/Button blanks/Cattle Color Button/Color No 2.png"
+import cattleHorn3 from "../images/Button blanks/Cattle Color Button/Dark Pink.png"
+import cattleHorn4 from "../images/Button blanks/Cattle Color Button/Light Pink.png"
+import cattleHorn5 from "../images/Cattle Button/5.png"
+import cattleHorn6 from "../images/Cattle Button/6.png"
+import cattleHorn7 from "../images/Cattle Button/7.png"
+import cattleHorn8 from "../images/Cattle Button/8.png"
+import bone_button1 from "../images/Button blanks/Bone Button blanks/1.png"
+import bone_button2 from "../images/Button blanks/Bone Button blanks/2.png"
+
+import horntip1 from "../images/Horn Tip/file_00000000b0f87208afbd1f708047ec51.png"
+import horntip2 from "../images/Horn Tip/file_000000007ff8720b934d9f1bb97a34d5.png"
+import horntip3 from "../images/Horn Tip/file_0000000091f472089ccd043faaad335e.png"
+import whitespot1 from "../images/packing/file_00000000b3a0720b8f53cd2463770e7e.png"
+import whitespot2 from "../images/packing/file_00000000003c71faaca0cda90c529dc1.png"
+
 
 export const PRODUCTS: Product[] = [
   {
@@ -140,73 +165,94 @@ export const getProductImages = (product: Product) => {
     if (product.grainPattern === "Solid Deep Black") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=80",
+        url: Buffolo1,
         label: "Polished Black Button Specimen"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=800&q=80",
+        url: Buffolo2,
         label: "Dense Obsidian Grain"
+      });
+      images.push({
+        type: "photo",
+        url: Buffolo3,
+        label: "Dense Obsidian Grain button"
       });
     } else if (product.grainPattern === "Ivory Matte") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1590534244455-c9940687705b?auto=format&fit=crop&w=800&q=80",
+        url: bone_button1,
         label: "Pristine Bone Craft Discs"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+        url: bone_button2,
         label: "Polished Bovine Bone Grain"
       });
     } else if (product.grainPattern === "Marbled Black & Cream") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80",
+        url: Buffolo5,
         label: "Marbled Horn Button Specimen"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?auto=format&fit=crop&w=800&q=80",
+        url: Buffolo6,
         label: "High Contrast Swirled Fibers"
       });
     } else if (product.grainPattern === "Vibrant Dyed Matte") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
+        url: Buffolo7,
         label: "Saturated Organic Crafted Blanks"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
-        label: "Infused Natural Grain Sheen"
+        url: Buffolo8,
+        label: "Saturated Organic Crafted Blanks"
       });
     } else if (product.grainPattern === "Blush Rose Hue") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn1,
         label: "Blush Rose Suit Fabric Context"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn2,
         label: "Delicate Pastel Rose Finish"
-      });
-    } else if (product.grainPattern === "Rosy Magenta Hue") {
+      }); 
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn6,
+        label: "Quality Craft Workbench"
+      });
+      } else if (product.grainPattern === "Rosy Magenta Hue") {
+      images.push({
+        type: "photo",
+        url: Buffolo3,
         label: "Vibrant Rosy Magenta Textiles"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn2,
         label: "Deep Hand-Polished Magenta Grain"
       });
     } else if (product.grainPattern === "Crimson Rose Hue") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn3,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: cattleHorn4,
+        label: "Deep Hand-Polished Magenta Grain"
+      });
+    } else if (product.grainPattern === "Crimson Rose Hue") {
+      images.push({
+        type: "photo",
+        url: horntip1,
         label: "Bespoke Crimson Fabric Backdrop"
       });
       images.push({
@@ -241,52 +287,48 @@ export const getProductImages = (product: Product) => {
     if (product.grainPattern === "Polished Obsidian") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn7,
         label: "Polished Obsidian Horn Plate"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=800&q=80",
+        url: cattleHorn8,
         label: "Flat-Shaved Black Horn Slab"
       });
     } else if (product.grainPattern === "Speckled White & Onyx") {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
+        url: whitespot1,
         label: "Spotted Onyx Plate Specimen"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+        url: whitespot2,
         label: "Speckled White Marble Core Plate"
       });
     } else {
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80",
+        url: horntip2,
         label: "Premium Flattened Core Slab"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+        url: horntip3,
         label: "Polished Horn Veneer"
       });
     }
   }
 
-  images.push({ type: "vector", label: "3D Digital Spec" });
+  // images.push({ type: "vector", label: "3D Digital Spec" });
 
-  images.push({
-    type: "photo",
-    url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-    label: "Export Grade Packaging"
-  });
+  // images.push({
+  //   type: "photo",
+  //   url: cattleHorn5,
+  //   label: "Export Grade Packaging"
+  // });
 
-  images.push({
-    type: "photo",
-    url: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
-    label: "Quality Craft Workbench"
-  });
+ 
 
   // Automatically attach a descriptive alt tag based on product name, material, and label to assist search engine indexing and screen readers
   return images.map(img => ({

@@ -19,8 +19,8 @@ interface ProductsSectionProps {
   selectedQuantities: Record<number, number>;
   setSelectedSizes: React.Dispatch<React.SetStateAction<Record<number, string>>>;
   setSelectedQuantities: React.Dispatch<React.SetStateAction<Record<number, number>>>;
-  productFinishes: Record<number, "matte" | "high-polish" | "natural-grain">;
-  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "matte" | "high-polish" | "natural-grain">>>;
+  productFinishes: Record<number, "Natural" | "high-polish" | "natural color Atta">;
+  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "Natural" | "high-polish" | "natural color Atta">>>;
   handleCopyProductText: (product: Product) => void;
   productSlideIndices?: Record<number, number>;
   handleProductSlideChange?: (productId: number, direction: "next" | "prev" | number, e?: React.MouseEvent) => void;
@@ -114,7 +114,7 @@ function ProductCard({
 
   const getSizesForProduct = (prod: Product) => {
     if (prod.category === "Button Blanks") {
-      return ["15mm (24L)", "20mm (32L)", "24mm (40L)", "30mm (48L)"];
+      return ["14mm", "16mm", "19mm", "21mm", "23mm", "26mm", "29mm", "31mm"];
     } else if (prod.category === "Flat Plates") {
       return ["60x140mm", "70x170mm", "80x200mm"];
     } else {
@@ -234,17 +234,17 @@ function ProductCard({
         </div>
 
         {/* Dynamic Image purpose pill badge */}
-        <span className="absolute top-4 left-4 bg-zinc-950/90 text-[7px] font-mono text-white px-2 py-0.5 uppercase tracking-widest font-black rounded z-20">
+        <span className="absolute top-4 left-4  text-[7px] font-mono text-white px-2 py-0.5 uppercase tracking-widest font-black rounded z-20">
           {currentSlide?.label || "Specimen Photo"}
         </span>
 
         {/* Index indicator */}
-        <span className="absolute top-4 right-4 bg-white/95 text-[8px] font-mono text-zinc-600 px-2 py-0.5 rounded border border-zinc-200/80 z-20">
+        <span className="absolute top-4 right-4 bg-black/90 dark:bg-white/55 text-white dark:text-black text-[8px] font-mono px-2 py-0.5 rounded border border-zinc-700 dark:border-zinc-300 z-20">
           0{currentSlideIndex + 1} / 0{slides.length}
         </span>
 
         {/* Click to inspect zoom banner overlay */}
-        <div className="absolute inset-x-0 bottom-12 py-2 bg-zinc-950/80 text-white font-mono text-[8px] uppercase tracking-[0.2em] text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none font-bold">
+        <div className="absolute inset-x-0 bottom-12 py-2 bg-zinc-950/20 text-white font-mono text-[8px] uppercase tracking-[0.2em] text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none font-bold">
           Click Image to Inspect Zoom
         </div>
       </div>
@@ -396,7 +396,7 @@ export default function ProductsSection({
         </div>
 
         {/* Refactored High-Resolution product display grid to a 3-column masonry layout */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance] w-full">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}

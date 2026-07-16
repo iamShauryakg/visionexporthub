@@ -252,12 +252,12 @@ export default function CommandPalette({
       {/* Help tooltip indicator in margins */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-24 z-40 bg-zinc-950/80 hover:bg-zinc-900 text-amber-500 hover:text-white border border-amber-500/30 hover:border-amber-500 px-3 py-2 text-[10px] font-mono tracking-widest uppercase transition-all shadow-lg flex items-center space-x-1.5 backdrop-blur-md cursor-pointer rounded-none group"
+        className="fixed bottom-6 right-24 z-40  bg-zinc-900 text-amber-500 hover:text-white border border-amber-500/30 hover:border-amber-500 px-3 py-2 text-[10px] font-mono tracking-widest uppercase transition-all shadow-lg flex items-center space-x-1.5 backdrop-blur-md cursor-pointer rounded-none group"
         title="Open B2B Navigation Palette"
       >
         <Search className="w-3.5 h-3.5" />
-        <span className="hidden sm:inline">Nav Menu</span>
-        <kbd className="bg-zinc-800 text-[9px] px-1 py-0.5 border border-zinc-700 rounded-sm font-mono text-zinc-400 group-hover:text-white ml-1">
+        <span className="hidden sm:inline ">Nav Menu</span>
+        <kbd className="bg-zinc-800 text-[9px] px-1 py-0.5 border border-zinc-700 rounded-sm font-mono text-white-400 group-hover:text-white ml-1">
           ⌘K
         </kbd>
       </button>

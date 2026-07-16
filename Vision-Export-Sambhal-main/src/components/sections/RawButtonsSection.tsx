@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Eye, Cpu, Maximize2, ShieldCheck, Scale, Droplet, Layers, Search, Compass, FileSpreadsheet, ChevronRight, Sparkles, AlertCircle } from "lucide-react";
+import rawImage1 from "../../images/Manufacture/file_00000000c2e0720b9c53ed08eefe5e14.png";
+import rawImage2 from "../../images/Manufacture/file_0000000043107207804a9f9b21053f9f.png";
+import rawImage3 from "../../images/Manufacture/file_0000000050b8720b9a2755d7d6243648.png";
 
 interface RawButtonSpecimen {
   id: number;
@@ -37,7 +40,7 @@ const RAW_BUTTON_SPECIMENS: RawButtonSpecimen[] = [
     compliance: "CE, REACH, OEKO-TEX 100",
     applications: ["Double-Breasted Overcoat Buttons", "Artisanal Optical Frames", "Premium Knife Scales"],
     description: "Cut directly from the solid core tip of Water Buffalo horns. These raw discs display a rough fibrous perimeter with the authentic, gorgeous matte gray-black luster of natural biological horn tissue, calibrated for perfect structural weight.",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
+    image: rawImage1,
     category: "horn",
   },
   {
@@ -55,7 +58,7 @@ const RAW_BUTTON_SPECIMENS: RawButtonSpecimen[] = [
     compliance: "CE, REACH, Animal Health Certified",
     applications: ["Bespoke Suit Buttons", "Fine Hair Accessories", "High-Contrast Inlay Veneers"],
     description: "A dual-tone raw blank carefully pressed using gentle natural heat to ensure absolute structural flatness. Displays swirling ivory and deep charcoal layers waiting for final multi-stage abrasive tumbling to reveal breathtaking luster.",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
+    image: rawImage2,
     category: "horn",
   },
   {
@@ -73,7 +76,7 @@ const RAW_BUTTON_SPECIMENS: RawButtonSpecimen[] = [
     compliance: "Veterinary Clearance, REACH Standards",
     applications: ["Luxury Ivory-White Buttons", "Instrument Nuts & Bridge Pins", "Artisanal Chess & Fine Carving"],
     description: "A thick, dense, solid white bovine bone blank after laser drilling but prior to chemical-free tumbling. Possesses an elegant ivory texture that radiates a rustic, modern-minimalist artisan vibe and supreme thread-stability.",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+    image: rawImage3,
     category: "bone",
   },
 ];
@@ -268,7 +271,7 @@ Generated dynamically via Vision Material Desk (Sambhal, India)
                     </div>
 
                     {/* Stage Technical Badge */}
-                    <span className="absolute top-4 left-4 bg-zinc-950/95 border border-zinc-800 text-[7px] font-mono text-zinc-400 px-2.5 py-1 uppercase tracking-widest font-black rounded-none">
+                    <span className="absolute top-4 left-4 bg-zinc-950/25 border border-zinc-800/50 text-[7px] font-mono text-white  px-2.5 py-1 uppercase tracking-widest font-black rounded-none">
                       {spec.stage}
                     </span>
 

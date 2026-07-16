@@ -16,6 +16,7 @@ import {
   PenTool,
   Twitter
 } from "lucide-react";
+import Logo from "../images/logo/vision logo.png";
 
 interface FooterProps {
   whatsappNumber: string;
@@ -47,7 +48,7 @@ export default function Footer({ whatsappNumber, onOpenLegal, onOpenConfig, onNa
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-11 h-11 rounded-full bg-amber-500 flex items-center justify-center font-serif font-black text-black text-xl shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                V
+                <img src={Logo} alt="Vision Export Logo" />   
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg tracking-[0.15em] font-black uppercase text-zinc-950">

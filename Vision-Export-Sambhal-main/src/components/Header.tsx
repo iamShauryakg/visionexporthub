@@ -3,6 +3,7 @@ import { Menu, X, ShieldCheck, Globe, HelpCircle, ArrowLeft, ChevronDown, Chevro
 import { AnimatePresence, motion } from "motion/react";
 import { Product } from "../types";
 import { FAQS } from "../data/constants";
+import Logo from "../images/logo/vision logo.png"
 
 const WhatsAppIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg 
@@ -28,7 +29,7 @@ interface HeaderProps {
   onOpenLegal: (tab: "privacy" | "moq" | "certificates" | "terms" | "freight") => void;
   whatsappNumber: string;
   onOpenConfig: () => void;
-  theme: "dark" | "light";
+  theme: "light" | "dark";
   onToggleTheme: () => void;
   activeView?: "home" | "contact";
   onNavigate?: (view: "home" | "contact", targetHash?: string) => void;
@@ -80,7 +81,8 @@ export default function Header({
               <div className="absolute inset-0.5 rounded-full border border-amber-500/10"></div>
               <div className="relative z-10 flex flex-col items-center justify-center -space-y-0.5">
                 <span className="font-serif font-black text-amber-500 text-lg leading-none tracking-tighter select-none transform group-hover:scale-110 transition-transform duration-300">
-                  V
+                <img src={Logo} alt="Vision Export Logo"  />
+                  
                 </span>
                 <div className="grid grid-cols-2 gap-1 mt-0.5 opacity-90">
                   <div className="w-1 h-1 rounded-full bg-amber-500"></div>
@@ -228,20 +230,11 @@ export default function Header({
             <button
               onClick={onToggleTheme}
               className="p-2.5 border border-zinc-800 hover:border-zinc-500 bg-transparent text-zinc-300 hover:text-white transition-all duration-300 rounded-none cursor-pointer flex items-center justify-center h-11 w-11 overflow-hidden relative"
-              title={theme === "dark" ? "Switch to Couture Light Mode" : "Switch to Obsidian Dark Mode"}
+              title={theme === "light" ? "Switch to Obsidian Dark Mode" : "Switch to Couture Light Mode"}
             >
               <AnimatePresence mode="wait">
-                {theme === "dark" ? (
-                  <motion.div
-                    key="sun"
-                    initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
-                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                    exit={{ opacity: 0, rotate: 90, scale: 0.6 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Sun className="w-4 h-4 text-amber-500" />
-                  </motion.div>
-                ) : (
+                {theme === "light" ? (
+                  
                   <motion.div
                     key="moon"
                     initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
@@ -250,6 +243,15 @@ export default function Header({
                     transition={{ duration: 0.3 }}
                   >
                     <Moon className="w-4 h-4 text-zinc-800" />
+                  </motion.div>
+                ) : (<motion.div
+                    key="sun"
+                    initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
+                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                    exit={{ opacity: 0, rotate: 90, scale: 0.6 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Sun className="w-4 h-4 text-amber-500" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -273,12 +275,12 @@ export default function Header({
             <button
               onClick={onToggleTheme}
               className="p-2 border border-zinc-800 bg-transparent text-zinc-300 hover:text-white transition-all duration-300 rounded-none cursor-pointer flex items-center justify-center"
-              title={theme === "dark" ? "Switch to Couture Light Mode" : "Switch to Obsidian Dark Mode"}
+              title={theme === "light" ? "Switch to Obsidian Dark Mode" : "Switch to Couture Light Mode"}
             >
-              {theme === "dark" ? (
-                <Sun className="w-3.5 h-3.5 text-amber-500" />
-              ) : (
+              {theme === "light" ? (
                 <Moon className="w-3.5 h-3.5 text-zinc-800" />
+              ) : (
+                <Sun className="w-3.5 h-3.5 text-amber-500" />
               )}
             </button>
 
@@ -679,7 +681,7 @@ export default function Header({
               )}
 
               {/* BRAND INDICATOR */}
-              <div className={`pt-6 border-t ${theme === "dark" ? "border-zinc-800" : "border-zinc-200"}`}>
+              <div className={`pt-6 border-t ${theme === "light" ? "border-zinc-800" : "border-zinc-200"}`}>
                 <div className="flex flex-col items-center justify-center space-y-2 text-center">
                   <div className="flex items-center space-x-1.5 text-[8px] font-mono tracking-[0.15em] text-zinc-500 font-bold uppercase">
                     <Award className="w-3.5 h-3.5 text-amber-600" />

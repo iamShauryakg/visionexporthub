@@ -146,7 +146,7 @@ interface PremiumTactileContainerProps {
   children: React.ReactNode;
   id?: string;
   className?: string;
-  theme: "dark" | "light";
+  theme:"light" | "dark" ;
 }
 
 function PremiumTactileContainer({ children, id, className = "", theme }: PremiumTactileContainerProps) {
@@ -191,7 +191,7 @@ export default function App() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("vision-theme") as "dark" | "light" | null;
+      const savedTheme = localStorage.getItem("vision-theme")as "dark" | "light" | null;
       if (savedTheme) {
         const root = document.documentElement;
         if (savedTheme === "light") {
@@ -214,7 +214,7 @@ export default function App() {
         return savedTheme;
       }
     }
-    return "dark";
+    return "light";
   });
 
   // Synchronize class and local storage changes before first print with CSS variables

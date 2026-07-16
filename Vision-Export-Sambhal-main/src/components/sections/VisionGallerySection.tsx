@@ -51,7 +51,7 @@ export default function VisionGallerySection() {
         </motion.div>
 
         {/* Gallery Grid refactored to a 3-column masonry layout */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance] w-full">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {GALLERY_LIST.map((item, index) => {
             const isClicked = !!clickedCards[item.id];
             return (
@@ -84,9 +84,9 @@ export default function VisionGallerySection() {
                         loading="lazy"
                         className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                       />
-                      <span className="absolute bottom-3 left-3 bg-zinc-950/90 border border-zinc-850 text-[8px] font-mono text-zinc-300 px-2.5 py-1 uppercase tracking-widest font-black rounded-lg">
+                      {/* <span className="absolute bottom-3 left-3 bg-zinc-950/90 border border-zinc-850 text-[8px] font-mono text-zinc-300 px-2.5 py-1 uppercase tracking-widest font-black rounded-lg">
                         {item.tag}
-                      </span>
+                      </span> */}
 
                       {/* Accent hover tag */}
                       <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

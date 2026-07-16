@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, ArrowRight, Shield } from "lucide-react";
+import Heroimages1 from '../images/heroIMG/hero.png'
+import Heroimages2 from '../images/heroIMG/hero2.png'
 
 interface CoutureHeroProps {
   companyName: string;
@@ -8,10 +10,8 @@ interface CoutureHeroProps {
 }
 
 const DEFAULT_HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=2000&q=90"
+  Heroimages1,
+  Heroimages2
 ];
 
 export default function CoutureHero({ companyName, heroImages }: CoutureHeroProps) {
@@ -134,7 +134,7 @@ export default function CoutureHero({ companyName, heroImages }: CoutureHeroProp
             document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-zinc-400">SCROLL DOWN</span>
+          <span className="font-mono text-[20px] uppercase tracking-[0.4em] text-zinc-500">SCROLL DOWN</span>
           <ChevronDown className="w-4 h-4 text-amber-500" />
         </motion.div>
       </div>

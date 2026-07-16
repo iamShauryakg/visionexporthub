@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { X, ChevronLeft, ChevronRight, Phone, ShoppingBag, Copy, Printer } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Phone, ShoppingBag, Copy, Printer, Mail } from "lucide-react";
 import { Product, getProductImages } from "../data";
 import VirtualSurfaceCalibration from "./VirtualSurfaceCalibration";
 
@@ -10,8 +10,8 @@ interface ZoomModalProps {
   onClose: () => void;
   productSlideIndices: Record<number, number>;
   handleProductSlideChange: (productId: number, direction: "next" | "prev" | number, e?: React.MouseEvent) => void;
-  productFinishes: Record<number, "matte" | "high-polish" | "natural-grain">;
-  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "matte" | "high-polish" | "natural-grain">>>;
+  productFinishes: Record<number, "Natural" | "high-polish" | "natural color atta">;
+  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "Natural" | "high-polish" | "natural color atta">>>;
   showToast: (message: string) => void;
   selectedSizes: Record<number, string>;
   setSelectedSizes: React.Dispatch<React.SetStateAction<Record<number, string>>>;
@@ -40,7 +40,7 @@ export default function ZoomModal({
   const activeIndexRaw = productSlideIndices[product.id] || 0;
   const activeIndex = activeIndexRaw < slides.length ? activeIndexRaw : 0;
   const currentSlide = slides[activeIndex] || slides[0] || { type: "vector", label: "Specimen Digital Spec" };
-  const currentFinish = productFinishes[product.id] || "matte";
+  const currentFinish = productFinishes[product.id] || "Natural";
 
   const [isZoomed, setIsZoomed] = React.useState(false);
   const [panOffset, setPanOffset] = React.useState({ x: 0, y: 0 });
@@ -284,7 +284,7 @@ export default function ZoomModal({
               <div>
                 <span className="block text-zinc-400 mb-0.5">FINISH STATE</span>
                 <span className="text-emerald-600 font-black text-sm">
-                  {currentFinish === "high-polish" ? "🌟 HIGH-POLISH" : currentFinish === "natural-grain" ? "🌾 NATURAL" : "🪨 MATTE"}
+                  {currentFinish === "high-polish" ? "🌟 HIGH-POLISH" : currentFinish === "natural-grain" ? "🌾 NATURAL COLOR" : "🪨 NATURAL COLOR ATTA"}
                 </span>
               </div>
               <div>
@@ -326,13 +326,15 @@ export default function ZoomModal({
                   >
                     {product.category === "Button Blanks" ? (
                       <>
-                        <option value="12mm (20L)">12mm (20L)</option>
-                        <option value="15mm (24L)">15mm (24L)</option>
-                        <option value="18mm (28L)">18mm (28L)</option>
-                        <option value="20mm (32L)">20mm (32L)</option>
-                        <option value="24mm (40L)">24mm (40L) - Common</option>
-                        <option value="28mm (45L)">28mm (45L)</option>
-                        <option value="31mm (50L)">31mm (50L)</option>
+                        <option value="12mm">12mm</option>
+                        <option value="14mm">14mm</option>
+                        <option value="16mm">16mm</option>
+                        <option value="19mm">19mm</option>
+                        <option value="21mm - Common">21mm - Common</option>
+                        <option value="23mm">23mm</option>
+                        <option value="26mm">26mm</option>
+                        <option value="29mm">29mm</option>
+                        <option value="31mm">31mm</option>
                       </>
                     ) : (
                       <>
@@ -356,11 +358,11 @@ export default function ZoomModal({
                   >
                     {product.category === "Button Blanks" ? (
                       <>
-                        <option value={5000}>5,000 units (Trial)</option>
-                        <option value={10000}>10,000 units (Standard)</option>
-                        <option value={25000}>25,000 units</option>
-                        <option value={50000}>50,000 units (Value)</option>
-                        <option value={100000}>100,000+ units (FOB)</option>
+                        <option value={500}>500 KG (Trial)</option>
+                        <option value={1000}>1000 KG (Standard)</option>
+                        <option value={2500}>2500 KG</option>
+                        <option value={5000}>5000 KG (Value)</option>
+                        <option value={10000}>10000+ KG (FOB)</option>
                       </>
                     ) : (
                       <>
@@ -384,13 +386,38 @@ export default function ZoomModal({
                   <Phone className="w-4 h-4 text-white animate-pulse" />
                   <span>Inquire Specimen on WhatsApp</span>
                 </a>
+                <a
+                  href={`mailto:sales@visionexporthub.com?subject=${encodeURIComponent(
+                        `Inquiry about ${product.name}`
+                      )}&body=${encodeURIComponent(
+                        `Hello,
+
+                    I am interested in the following product:
+
+                    Product: ${product.name}
+                    Category: ${product.category}
+                    Size: ${selectedSizes[product.id]}
+                    Quantity: ${selectedQuantities[product.id]}
+
+                    Please send me more details and a quotation.
+                    Here is my contact info: 
+                    Phone no. [Your Phone Number]
+
+                    Thank you.`
+                      )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                 <button
                   onClick={() => handleCopyProductText(product)}
                   className="w-full bg-white hover:bg-zinc-50 text-zinc-950 hover:text-zinc-950 border-2 border-zinc-950 py-4 rounded-none text-xs sm:text-sm uppercase tracking-widest font-black flex items-center justify-center space-x-2 transition-all cursor-pointer shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]"
                 >
-                  <Copy className="w-4 h-4" />
-                  <span>Copy Specifications</span>
+                  <Mail className="w-4 h-4 text-white animate-pulse" />
+                  <span>Inquire Specimen on mail</span>
+                  {/* <Copy className="w-4 h-4" />
+                  <span>Copy Specifications</span> */}
                 </button>
+                  </a>
               </div>
             </div>
           </div>
@@ -472,7 +499,7 @@ export default function ZoomModal({
               <div className="flex justify-between border-b border-zinc-100 pb-1.5">
                 <span className="text-zinc-500 font-bold uppercase">Calibration State:</span>
                 <span className="text-zinc-900 font-black text-right uppercase">
-                  {productFinishes[product.id] || "matte"} Finish
+                  {productFinishes[product.id] || "Natural"} Finish
                 </span>
               </div>
               <div className="flex justify-between border-b border-zinc-100 pb-1.5">
