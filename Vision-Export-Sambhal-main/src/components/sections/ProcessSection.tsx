@@ -51,7 +51,7 @@ export default function ProcessSection() {
         </motion.div>
 
         {/* Process Steps Timeline Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 relative select-none">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 relative select-none">
           {PROCESS_STEPS.map((step, index) => {
             const isClicked = !!clickedSteps[step.step];
 

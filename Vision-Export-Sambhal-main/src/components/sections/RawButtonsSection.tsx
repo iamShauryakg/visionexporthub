@@ -63,7 +63,7 @@ const RAW_BUTTON_SPECIMENS: RawButtonSpecimen[] = [
   },
   {
     id: 3,
-    name: "Natural Bovine Bone Blank",
+    name: "Cattle Bovine Bone Blank",
     stage: "Stage 03: Precision Drilling",
     material: "Bovine Femur Core (Ethical)",
     roughness: "Raw Unbuffed Matte Ivory",
@@ -131,7 +131,7 @@ Generated dynamically via Vision Material Desk (Sambhal, India)
 
   const getWhatsAppLink = () => {
     const text = `Hello Vision Export, I am interested in procuring a batch of raw material specimen: "${selectedSpecimen.name}" (SPEC-0${selectedSpecimen.id}). Can you please share pricing and minimum order terms for a volume of approx ${orderQuantity.toLocaleString()} pieces? Thanks.`;
-    return `https://wa.me/918218151208?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/919548470907?text=${encodeURIComponent(text)}`;
   };
 
   return (

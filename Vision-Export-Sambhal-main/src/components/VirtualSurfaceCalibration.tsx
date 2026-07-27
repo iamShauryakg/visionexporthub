@@ -3,8 +3,8 @@ import React from "react";
 interface VirtualSurfaceCalibrationProps {
   productId: number;
   productName: string;
-  productFinish: "Natural" | "high-polish" | "natural color atta";
-  setProductFinish: (finish: "Natural" | "high-polish" | "natural color atta") => void;
+  productFinish: "Natural";
+  setProductFinish: (finish: "Natural") => void;
   showToast: (message: string) => void;
 }
 
@@ -18,13 +18,14 @@ export default function VirtualSurfaceCalibration({
   return (
     <div className="bg-white p-6 border-2 border-zinc-950 space-y-4 shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
       <div className="flex items-center space-x-2">
-        <span className="text-xs bg-zinc-100 text-zinc-800 border border-zinc-300 px-2 py-0.5 font-mono font-bold">LAB</span>
+        <span className="text-lg bg-zinc-100 text-zinc-800 border border-zinc-300 px-2 py-0.5 font-mono font-bold">LAB</span>
         <h4 className="text-xs sm:text-sm uppercase font-mono tracking-widest text-zinc-950 font-black">
           Virtual Surface Calibration
         </h4>
       </div>
-      <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-semibold">
-        Simulate alternative physical finishing types on this specimen. The dynamic finish affects the physical appearance and 3D specular light reflection.
+      <p className="text-lg  sm:text-sm text-zinc-600 leading-relaxed font-semibold">
+        {/* Simulate alternative physical finishing types on this specimen. The dynamic finish affects the physical appearance and 3D specular light reflection. */}
+        Simulate diverse physical finishing types on the specimen, emphasizing how dynamic finishes alter surface texture, color depth, and three‑dimensional specular light reflection. Highlight variations such as matte, glossy, satin, and metallic, showing their impact on visual perception, material realism, and reflective behavior under different lighting conditions.
       </p>
 
       <div className="space-y-2.5 pt-2">
@@ -48,7 +49,7 @@ export default function VirtualSurfaceCalibration({
         </button>
 
         {/* High Polish */}
-        <button
+        {/* <button
           onClick={() => {
             setProductFinish("high-polish");
             showToast(`SUCCESS: Configured High-Polish finish for ${productName}!`);
@@ -64,10 +65,10 @@ export default function VirtualSurfaceCalibration({
             <span className="text-xs text-amber-600/80 font-semibold block mt-0.5">Glassy mirror specular sheen</span>
           </div>
           {productFinish === "high-polish" && <span className="text-sm font-black">🌟</span>}
-        </button>
+        </button>*/}
 
         {/* Natural Grain */}
-        <button
+        {/* <button
           onClick={() => {
             setProductFinish("natural color atta");
             showToast(`SUCCESS: Configured Natural Color Atta finish for ${productName}!`);
@@ -83,7 +84,7 @@ export default function VirtualSurfaceCalibration({
             <span className="text-xs text-emerald-600/80 font-semibold block mt-0.5">Exposes fine fibrous structure</span>
           </div>
           {productFinish === "natural color atta" && <span className="text-sm font-black">✓</span>}
-        </button>
+        </button> */} 
       </div>
     </div>
   );

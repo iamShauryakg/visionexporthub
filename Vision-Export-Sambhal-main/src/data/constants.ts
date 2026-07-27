@@ -127,18 +127,18 @@ export const MANUFACTURING_PROCESS: ManufacturingStep[] = [
     title: "Sorting & Selection",
     description: "Each raw horn and bone is sorted manually by Master Artisans based on width, fiber density, and natural color variations (deep black, ivory cream, rare white spots)."
   },
+  // {
+  //   step: "03",
+  //   title: "Heat & Press Flattening",
+  //   description: "For plates, the raw horns are split and gently heated over charcoal fires to soften them, then flattened under highly controlled mechanical press plates with zero chemical additives."
+  // },
   {
     step: "03",
-    title: "Heat & Press Flattening",
-    description: "For plates, the raw horns are split and gently heated over charcoal fires to soften them, then flattened under highly controlled mechanical press plates with zero chemical additives."
-  },
-  {
-    step: "04",
     title: "Precision Cutting & Shaving",
     description: "Using advanced circular cutting saws, blanks are punched accurately from 12mm to 31mm, then shaved to exact uniform thickness ranging from 2mm to 8mm according to export demands."
   },
   {
-    step: "05",
+    step: "04",
     title: "Double-Stage Quality Audit",
     description: "Every single batch undergoes standard structural sanity tests and moisture level optimization, followed by strict cosmetic review to guarantee premium B2B grade exports."
   }

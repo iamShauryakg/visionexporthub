@@ -26,7 +26,7 @@ interface ProductsSectionProps {
   handleProductSlideChange?: (productId: number, direction: "next" | "prev" | number, e?: React.MouseEvent) => void;
 }
 
-const CATEGORIES = ["All Materials", "Button Blanks", "Flat Plates", "Exotic Blanks"];
+const CATEGORIES = ["All Materials", "Button Blanks", "Flat Plates", "Other"];
 
 interface ProductCardProps extends ProductsSectionProps {
   product: Product;

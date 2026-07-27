@@ -10,8 +10,8 @@ interface ZoomModalProps {
   onClose: () => void;
   productSlideIndices: Record<number, number>;
   handleProductSlideChange: (productId: number, direction: "next" | "prev" | number, e?: React.MouseEvent) => void;
-  productFinishes: Record<number, "Natural" | "high-polish" | "natural color atta">;
-  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "Natural" | "high-polish" | "natural color atta">>>;
+  productFinishes: Record<number, "Natural" >;
+  setProductFinishes: React.Dispatch<React.SetStateAction<Record<number, "Natural" >>>;
   showToast: (message: string) => void;
   selectedSizes: Record<number, string>;
   setSelectedSizes: React.Dispatch<React.SetStateAction<Record<number, string>>>;
@@ -278,18 +278,20 @@ export default function ZoomModal({
                 <span className="text-zinc-950 font-black text-sm">{product.grainPattern}</span>
               </div>
               <div>
-                <span className="block text-zinc-400 mb-0.5">THICKNESS</span>
+                <span className="block text-zinc-400 mb-0.5">Size</span>
                 <span className="text-zinc-950 font-black text-sm">{product.dimensions}</span>
               </div>
-              <div>
+              {/* <div>
                 <span className="block text-zinc-400 mb-0.5">FINISH STATE</span>
                 <span className="text-emerald-600 font-black text-sm">
                   {currentFinish === "high-polish" ? "🌟 HIGH-POLISH" : currentFinish === "natural-grain" ? "🌾 NATURAL COLOR" : "🪨 NATURAL COLOR ATTA"}
                 </span>
-              </div>
+              </div> */}
               <div>
                 <span className="block text-zinc-400 mb-0.5">B2B MOQs</span>
-                <span className="text-zinc-950 font-black text-sm">5,000 Pcs</span>
+                <span className="text-zinc-950 font-black text-sm">
+                  {product.category === "Button Blanks" ? "5,000 Kg" : "5,000 Pcs"}
+                </span>
               </div>
             </div>
           </div>
@@ -336,12 +338,20 @@ export default function ZoomModal({
                         <option value="29mm">29mm</option>
                         <option value="31mm">31mm</option>
                       </>
-                    ) : (
+                    ) : product.category === "Flat Plates" ? (
                       <>
                         <option value="50x150mm (3mm)">50x150mm (3mm)</option>
                         <option value="60x160mm (4mm)">60x160mm (4mm)</option>
                         <option value="70x170mm (4mm)">70x170mm (4mm)</option>
                         <option value="80x200mm (5mm)">80x200mm (5mm) - Heavy</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="250ml">250ml</option>
+                        <option value="350ml">350ml</option>
+                        <option value="500ml">500ml (most popular)</option>
+                        <option value="650ml">650ml</option>
+                        <option value="750ml">750ml</option>
                       </>
                     )}
                   </select>
@@ -504,7 +514,7 @@ export default function ZoomModal({
               </div>
               <div className="flex justify-between border-b border-zinc-100 pb-1.5">
                 <span className="text-zinc-500 font-bold uppercase">Estimated MOQ:</span>
-                <span className="text-zinc-900 font-black text-right">5,000 Pcs / Batch</span>
+                <span className="text-zinc-900 font-black text-right">5,000 KG / Batch</span>
               </div>
             </div>
           </div>

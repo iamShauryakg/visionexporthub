@@ -558,11 +558,11 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
             <ProcessSection />
           </PremiumTactileContainer>
 
-          <ScrollRevealDivider />
+          {/* <ScrollRevealDivider />
 
           <PremiumTactileContainer theme={theme} id="gallery">
             <VisionGallerySection />
-          </PremiumTactileContainer>
+          </PremiumTactileContainer> */}
 
           <ScrollRevealDivider />
 
@@ -576,13 +576,13 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
             <TestimonialsSection />
           </PremiumTactileContainer>
 
-          <ScrollRevealDivider />
+          {/* <ScrollRevealDivider />
 
           <PremiumTactileContainer theme={theme} id="calibration">
             <LazySection>
               <CalibrationSuiteSection />
             </LazySection>
-          </PremiumTactileContainer>
+          </PremiumTactileContainer> */}
 
           <ScrollRevealDivider />
 
@@ -595,12 +595,12 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
           <PremiumTactileContainer theme={theme} id="sustainability">
             <ComplianceSection />
           </PremiumTactileContainer>
-
+{/* 
           <ScrollRevealDivider />
 
           <PremiumTactileContainer theme={theme} id="partners">
             <PartnersSection />
-          </PremiumTactileContainer>
+          </PremiumTactileContainer> */}
         </>
       ) : (
         <div className="pt-28 pb-20 min-h-screen flex flex-col justify-start relative overflow-hidden">
@@ -731,9 +731,9 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
 
             </div>
           </div>
-
+                      <>
           {/* ACTIVE DESKS SUBSECTION GRID */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-12 z-10">
+          {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-12 z-10">
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-6"
               initial="hidden"
@@ -751,7 +751,7 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
             >
               
               {/* DESK 1: MILAN DESIGN DESK */}
-              <motion.div
+              {/* <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 35 },
                   show: { 
@@ -817,7 +817,7 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
               </motion.div>
 
               {/* DESK 2: SAMBHAL ATELIER */}
-              <motion.div
+             {/* } <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 35 },
                   show: { 
@@ -883,7 +883,7 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
               </motion.div>
 
               {/* DESK 3: MUNDRA SHIPPING */}
-              <motion.div
+             {/* <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 35 },
                   show: { 
@@ -949,8 +949,8 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
               </motion.div>
 
             </motion.div>
-          </div>
-
+          </div> */}
+                      </>
           <motion.div 
             initial={{ opacity: 0, y: 25 }} 
             animate={{ opacity: 1, y: 0 }} 
