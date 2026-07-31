@@ -1,12 +1,33 @@
 import { Product } from "../types";
 import Buffolo0 from "../images/Buffalo Button/1.png"
 // import Buffolo1 from "../images/Buffalo Button/12MM & 14MM.png"
-import Buffolo2 from "../images/Buffalo Button/16MM.png"
-import Buffolo3 from "../images/Buffalo Button/19MM.png"
+import Buffolo2 from "../images/Buffalo Button/2.png"
+import Buffolo3 from "../images/Buffalo Button/3.png"
 
 import white_buffalo_button1 from "../images/Rest products/Button blanks/Buffalo white spot/1.png"
 import white_buffalo_button2 from "../images/Rest products/Button blanks/Buffalo white spot/2.png"
 import white_buffalo_button3 from "../images/Rest products/Button blanks/Buffalo white spot/3.png"
+
+import Buffalo_Black_hollow_button1 from "../images/Rest products/Button blanks/Buffalo Hollow Black Button Blanks/1.png"
+import Buffalo_Black_hollow_button2 from "../images/Rest products/Button blanks/Buffalo Hollow Black Button Blanks/2.png"
+import Buffalo_Black_hollow_button3 from "../images/Rest products/Button blanks/Buffalo Hollow Black Button Blanks/3.png"
+
+import Buffalo_color_hollow_button1 from "../images/Rest products/Button blanks/Buffalo Hollow Color Button Blanks/1.png"
+import Buffalo_color_hollow_button2 from "../images/Rest products/Button blanks/Buffalo Hollow Color Button Blanks/2.png"
+import Buffalo_color_hollow_button3 from "../images/Rest products/Button blanks/Buffalo Hollow Color Button Blanks/3.png"
+
+import Cattle_color_hollow_button1 from "../images/Rest products/Button blanks/Cattle Hollow Color Button Blanks/1.png"
+import Cattle_color_hollow_button2 from "../images/Rest products/Button blanks/Cattle Hollow Color Button Blanks/2.png"
+import Cattle_color_hollow_button3 from "../images/Rest products/Button blanks/Cattle Hollow Color Button Blanks/3.png"
+
+import Buffalo_Hollow_Horn_Skin_Button1 from "../images/Rest products/Button blanks/Buffalo Hollow Horn Skin Button Blanks/1.png"
+import Buffalo_Hollow_Horn_Skin_Button2 from "../images/Rest products/Button blanks/Buffalo Hollow Horn Skin Button Blanks/2.png"
+
+import Cattle_Black_Button1 from "../images/Rest products/Button blanks/Cttale Black Button Blanks/1.png"
+import Cattle_Black_Button2 from "../images/Rest products/Button blanks/Cttale Black Button Blanks/2.png"
+
+import Cattle_White_Spot_Button1 from "../images/Rest products/Button blanks/Cattle White Spot  Button Blanks/1.png"
+import Cattle_White_Spot_Button2 from "../images/Rest products/Button blanks/Cattle White Spot  Button Blanks/2.png"
 
 import CattleHorn1 from "../images/Button blanks/Cattle Color Button/Color No 3.png"
 import CattleHorn2 from "../images/Button blanks/Cattle Color Button/Color No 2.png"
@@ -31,23 +52,30 @@ import bone_button2 from "../images/Button blanks/Bone Button blanks/2.png"
 
 import buffalo_horn_color1 from "../images/Buffalo Color Button/1.png"
 import buffalo_horn_color2 from "../images/Buffalo Color Button/2.png"
-import buffalo_horn_color3 from "../images/Buffalo Color Button/3.png"
 
-import horntip1 from "../images/Horn Tip/file_00000000b0f87208afbd1f708047ec51.png"
-import horntip2 from "../images/Horn Tip/file_000000007ff8720b934d9f1bb97a34d5.png"
-import horntip3 from "../images/Horn Tip/file_0000000091f472089ccd043faaad335e.png"
 
 import Buffalo_horn1 from "../images/Rest products/other/Buffalo Horn Tip/1.png"
 import Buffalo_horn2 from "../images/Rest products/other/Buffalo Horn Tip/2.png"
 import Buffalo_horn3 from "../images/Rest products/other/Buffalo Horn Tip/3.png"
+import Buffalo_horn4 from "../images/Rest products/other/Buffalo Horn Tip/4.png"
+import Buffalo_horn5 from "../images/Rest products/other/Buffalo Horn Tip/5.png"
+import Buffalo_horn6 from "../images/Rest products/other/Buffalo Horn Tip/6.png"
 
 import Cattle_horn1 from "../images/Rest products/other/Cattle Horn Tip/1.png"
 import Cattle_horn2 from "../images/Rest products/other/Cattle Horn Tip/2.png"
 import Cattle_horn3 from "../images/Rest products/other/Cattle Horn Tip/3.png"
 
-import CattleHorntip1 from "../images//Other/Horn Tip/Cattle Horn Tip/1.png"
-import CattleHorntip2 from "../images//Other/Horn Tip/Cattle Horn Tip/2.png"
-import CattleHorntip3 from "../images//Other/Horn Tip/Cattle Horn Tip/3.png"
+import Dog_food_bowl1 from "../images/Rest products/Dog Food/1.png"
+import Dog_food_bowl2 from "../images/Rest products/Dog Food/2.png"
+import Dog_food_bowl3 from "../images/Rest products/Dog Food/3.png"
+
+import Handicraft_product1 from "../images/Rest products/Handicrafts Products/1.png"
+import Handicraft_product2 from "../images/Rest products/Handicrafts Products/2.png"
+import Handicraft_product3 from "../images/Rest products/Handicrafts Products/3.png"
+
+import Sheep_horn1 from "../images/Rest products/Sheep Horn/1.png"
+import Sheep_horn2 from "../images/Rest products/Sheep Horn/2.png"
+import Sheep_horn3 from "../images/Rest products/Sheep Horn/3.png"
 
 import whitespot1 from "../images/Buffalo White Streak Horn plate/1.png"
 import whitespot2 from "../images/Buffalo White Streak Horn plate/2.png"
@@ -92,9 +120,11 @@ import bone_plate2 from "../images/Rest products/Horn and Bone Plates/Bone Plate
 
 import horn_roll1 from "../images/Rest products/other/Horn Roll/1.png"
 import horn_roll2 from "../images/Rest products/other/Horn Roll/2.png"
+import horn_roll3 from "../images/Rest products/other/Horn Roll/3.png"
 
 import buffalo_horn_color_plate1 from "../images/Rest products/Horn and Bone Plates/Buffalo Horn Color Plate/1.png"
 import buffalo_horn_color_plate2 from "../images/Rest products/Horn and Bone Plates/Buffalo Horn Color Plate/2.png"
+import buffalo_horn_color_plate3 from "../images/Rest products/Horn and Bone Plates/Buffalo Horn Color Plate/3.png"
 
 export const PRODUCTS: Product[] = [
   {
@@ -253,165 +283,269 @@ export const PRODUCTS: Product[] = [
     imageAlt: "Colorful dyed buffalo horn button blanks",
     grainPattern: "Vibrant Dyed Matte"
   },
-  {
+  {    
     id: 13,
-    name: "Natural Black Buffalo Horn Plates",
-    category: "Flat Plates",
-    dimensions: "50mm x 150mm up to 80mm x 200mm (Thickness: 3mm - 8mm)",
-    material: "Water Buffalo Horn (Dense Core section)",
+    name: "Buffalo Hollow Black Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
+    material: "Buffalo Horn with organic luxury dyes",
     origin: "Sambhal, India",
-    description: "Premium large-format flat horn plates selected for premium optical frames, high-end knife handles, luxury combs, jewelry, and luxury architectural inlay work. Solid, deep black obsidian-like finish.",
-    texture: "Ultra-flat, thick, dense structure, polished to mirror-like sheen.",
-    sustainable: "100% natural, hand-split and flattened using gentle natural heat.",
-    imageAlt: "Large flat polished black buffalo horn plate",
-    grainPattern: "Polished Obsidian"
+    description: "Naturally light horn blanks deeply infused with organic, safe colorants to retain the natural fibrous grain underneath. Yields rich, saturated luxury tones unmatched by synthetic plastic buttons.",
+    texture: "Saturated translucent color overlays, delicate natural fiber visibility.",
+    sustainable: "Non-toxic certified organic coloring agents used.",
+    imageAlt: "Black dyed buffalo horn button blanks",
+    grainPattern: "Buffalo Hollow Black Button Blanks"
   },
-  {
+  {    
     id: 14,
-    name: "White Spot Buffalo Horn Plates",
-    category: "Flat Plates",
-    dimensions: "50mm x 150mm up to 80mm x 200mm (Thickness: 3mm - 8mm)",
-    material: "Water Buffalo Horn (Specially selected marbled section)",
+    name: "Buffalo Hollow Color Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
+    material: "Buffalo Horn with organic luxury dyes",
     origin: "Sambhal, India",
-    description: "Extremely rare and visually striking buffalo plates with milky white speckles and snowy marbling scattered on a jet-black background. Favored by boutique artisans and premium designers globally.",
-    texture: "High contrast spotted patterns, dense interior structural composition.",
-    sustainable: "Artisanally selected and precision-shaved with zero chemicals.",
-    imageAlt: "Spotted white and black natural buffalo horn plate",
-    grainPattern: "Speckled White & Onyx"
+    description: "Naturally light horn blanks deeply infused with organic, safe colorants to retain the natural fibrous grain underneath. Yields rich, saturated luxury tones unmatched by synthetic plastic buttons.",
+    texture: "Saturated translucent color overlays, delicate natural fiber visibility.",
+    sustainable: "Non-toxic certified organic coloring agents used.",
+    imageAlt: "Colorful dyed buffalo horn button blanks",
+    grainPattern: "Buffalo Hollow Color Button Blanks"
   },
-  {
+  {    
     id: 15,
-    name: "Buffalo Horn Color Plates",
-    category: "Flat Plates",
-    dimensions: "50mm x 150mm up to 80mm x 200mm (Thickness: 3mm - 8mm)",
-    material: "Water Buffalo Horn (Specially selected marbled section)",
+    name: "Cattle Hollow Color Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
+    material: "Cattle Horn with organic luxury dyes",
     origin: "Sambhal, India",
-    description: "Extremely rare and visually striking buffalo plates with milky white speckles and snowy marbling scattered on a jet-black background. Favored by boutique artisans and premium designers globally.",
-    texture: "High contrast spotted patterns, dense interior structural composition.",
-    sustainable: "Artisanally selected and precision-shaved with zero chemicals.",
-    imageAlt: "Spotted white and black natural buffalo horn plate",
-    grainPattern: "Speckled Color & Onyx"
+    description: "Naturally light horn blanks deeply infused with organic, safe colorants to retain the natural fibrous grain underneath. Yields rich, saturated luxury tones unmatched by synthetic plastic buttons.",
+    texture: "Saturated translucent color overlays, delicate natural fiber visibility.",
+    sustainable: "Non-toxic certified organic coloring agents used.",
+    imageAlt: "Colorful dyed cattle horn button blanks",
+    grainPattern: "Cattle Hollow Color Button Blanks"
   },
-  // {
-  //   id: 16,
-  //   name: "Cattle Horn plates",
-  //   category: "Button Blanks",
-  //   dimensions: "12mm - 31mm",
-  //   material: "Indian Zebu Cow Horn (Ethically sourced)",
-  //   origin: "Uttar Pradesh, India",
-  //   description: "Multitude of natural earthy color blanks dyed with advanced non-toxic B2B coloring protocols. Excellent strength-to-weight ratio making them highly versatile across light & heavy textiles.",
-  //   texture: "Earthy dyed gradients, natural horn striations visible.",
-  //   sustainable: "Naturally sourced with minimal mechanical processing footprint.",
-  //   imageAlt: "Earthy-colored dyed cow horn button blanks",
-  //   grainPattern: "Earthy Dyed Tones"
-  // },
   {
     id: 16,
-    name: "Bone plate",
-    category: "Flat Plates",
-    dimensions: "30mm - 60mm",
+    name: "Buffalo Hollow Horn Skin Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
-    description: "Elegant handcrafted horn toggles designed for coats, jackets, knitwear, bags, and premium fashion accessories.",
-    texture: "Smooth polished finish with unique natural grain.",
-    sustainable: "Manufactured using eco-friendly natural horn material.",
-    imageAlt: "Natural horn toggle",
-    grainPattern: "Natural bone plate"
+    description: "Premium buffalo horn button blanks featuring the natural outer horn skin, offering distinctive organic textures and rich natural patterns. Ideal for luxury garments, fashion accessories, and premium button manufacturing.",
+    texture: "Natural horn skin finish with visible organic grain and polished edges.",
+    sustainable: "Crafted from responsibly sourced buffalo horn by-products using environmentally friendly processes.",
+    imageAlt: "Natural buffalo horn skin button blanks",
+    grainPattern: "Buffalo Hollow Horn Skin Button Blanks"
   },
   {
     id: 17,
-    name: "Cattle Horn Color Plate",
-    category: "Flat Plates",
-    dimensions: "30mm - 60mm",
-    material: "Natural Buffalo Horn",
+    name: "Cattle Black Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
+    material: "Natural Cattle Horn",
     origin: "Sambhal, India",
-    description: "Elegant handcrafted horn toggles designed for coats, jackets, knitwear, bags, and premium fashion accessories.",
-    texture: "Smooth polished finish with unique natural grain.",
-    sustainable: "Manufactured using eco-friendly natural horn material.",
-    imageAlt: "Natural horn toggle",
-    grainPattern: "Cattle Horn Color Plate"
+    description: "Solid black cattle horn button blanks with excellent strength, smooth machining properties, and a naturally elegant appearance. Perfect for premium apparel, uniforms, knitwear, and luxury fashion accessories.",
+    texture: "Deep black polished finish with subtle natural horn grain.",
+    sustainable: "Manufactured from ethically sourced natural cattle horn using sustainable production methods.",
+    imageAlt: "Natural black cattle horn button blanks",
+    grainPattern: "Cattle Black Button Blanks"
   },
   {
     id: 18,
+    name: "Cattle White Spot Button Blanks",
+    category: "Button Blanks",
+    dimensions: "12mm - 31mm",
+    material: "Natural Cattle Horn",
+    origin: "Sambhal, India",
+    description: "Premium cattle horn button blanks showcasing unique white spotted patterns created naturally within the horn. Every blank offers a distinctive appearance suitable for luxury garments and designer collections.",
+    texture: "Smooth polished surface with natural white spotted grain.",
+    sustainable: "Produced from responsibly sourced natural cattle horn with minimal environmental impact.",
+    imageAlt: "Natural white spot cattle horn button blanks",
+    grainPattern: "Cattle White Spot Button Blanks"
+  },
+  {
+    id: 19,
+    name: "Natural Black Buffalo Horn Plates",
+    category: "Flat Plates",
+    dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
+    material: "Natural Buffalo Horn",
+    origin: "Sambhal, India",
+    description: "Premium black buffalo horn plates manufactured for knife handles, eyewear frames, combs, jewelry, musical instruments, luxury crafts, and custom industrial applications.",
+    texture: "Flat polished surface with dense black natural horn structure.",
+    sustainable: "Produced from ethically sourced buffalo horn using eco-conscious manufacturing practices.",
+    imageAlt: "Natural black buffalo horn flat plate",
+    grainPattern: "Polished Obsidian"
+  },
+  {
+    id: 20,
+    name: "White Spot Buffalo Horn Plates",
+    category: "Flat Plates",
+    dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
+    material: "Natural Buffalo Horn",
+    origin: "Sambhal, India",
+    description: "Premium buffalo horn plates featuring naturally occurring white spot patterns. Highly valued for premium knife scales, eyewear, jewelry, decorative inlays, and handcrafted products.",
+    texture: "High-contrast white spot pattern with polished natural finish.",
+    sustainable: "Made from responsibly sourced natural buffalo horn with environmentally responsible processing.",
+    imageAlt: "White spot buffalo horn flat plate",
+    grainPattern: "Speckled White & Onyx"
+  },
+  {
+    id: 21,
+    name: "Buffalo Horn Color Plates",
+    category: "Flat Plates",
+    dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
+    material: "Dyed Natural Buffalo Horn",
+    origin: "Sambhal, India",
+    description: "Premium buffalo horn plates available in attractive dyed colors while preserving the natural horn grain. Suitable for eyewear, knife handles, jewelry, handicrafts, and luxury accessories.",
+    texture: "Smooth polished colored surface with visible natural horn grain.",
+    sustainable: "Manufactured using eco-friendly dyes and ethically sourced buffalo horn.",
+    imageAlt: "Colored buffalo horn flat plates",
+    grainPattern: "Speckled Color & Onyx"
+  },
+  {
+    id: 22,
+    name: "Bone Plate",
+    category: "Flat Plates",
+    dimensions: "30mm - 60mm",
+    material: "Natural Bone",
+    origin: "Sambhal, India",
+    description: "Premium natural bone plates precisely manufactured for knife handles, jewelry, musical instruments, eyewear, decorative crafts, and luxury accessories.",
+    texture: "Smooth polished ivory surface with fine natural bone grain.",
+    sustainable: "Manufactured from ethically sourced natural bone using sustainable production methods.",
+    imageAlt: "Natural bone plate",
+    grainPattern: "Natural Bone Plate"
+  },
+  {
+    id: 23,
+    name: "Cattle Horn Color Plate",
+    category: "Flat Plates",
+    dimensions: "30mm - 60mm",
+    material: "Natural Cattle Horn",
+    origin: "Sambhal, India",
+    description: "Natural cattle horn plates available in vibrant dyed colors for premium knife scales, eyewear frames, jewelry, handicrafts, and fashion accessories.",
+    texture: "Smooth polished colored finish with visible natural horn patterns.",
+    sustainable: "Crafted from responsibly sourced cattle horn using eco-friendly coloring techniques.",
+    imageAlt: "Colored cattle horn plate",
+    grainPattern: "Cattle Horn Color Plate"
+  },
+  {
+    id: 24,
     name: "Buffalo Horn Toggle",
     category: "Other",
     dimensions: "30mm - 60mm",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
-    description: "Elegant handcrafted horn toggles designed for coats, jackets, knitwear, bags, and premium fashion accessories.",
-    texture: "Smooth polished finish with unique natural grain.",
-    sustainable: "Manufactured using eco-friendly natural horn material.",
+    description: "Handcrafted buffalo horn toggles designed for coats, jackets, duffle coats, knitwear, bags, and luxury fashion accessories.",
+    texture: "Smooth polished finish with natural buffalo horn grain.",
+    sustainable: "Manufactured from ethically sourced buffalo horn using environmentally responsible methods.",
     imageAlt: "Natural buffalo horn toggle",
     grainPattern: "Natural Buffalo Horn Toggle"
   },
   {
-    id: 19,
-    name: "Cattle Horn toggles",
+    id: 25,
+    name: "Cattle Horn Toggles",
     category: "Other",
     dimensions: "30mm - 60mm",
-    material: "Natural Buffalo Horn",
+    material: "Natural Cattle Horn",
     origin: "Sambhal, India",
-    description: "Elegant handcrafted horn toggles designed for coats, jackets, knitwear, bags, and premium fashion accessories.",
-    texture: "Smooth polished finish with unique natural grain.",
-    sustainable: "Manufactured using eco-friendly natural horn material.",
-    imageAlt: "Natural horn toggle",
+    description: "Premium handcrafted cattle horn toggles suitable for garments, outerwear, handbags, and designer fashion accessories.",
+    texture: "Natural polished cattle horn with unique grain patterns.",
+    sustainable: "Crafted from responsibly sourced cattle horn by-products.",
+    imageAlt: "Natural cattle horn toggle",
     grainPattern: "Natural Cattle Horn Toggle"
   },
   {
-    id: 20,
-    name: "Horn Roll",
+    id: 26,
+    name: "Natural Horn Roll",
     category: "Other",
-    dimensions: "250ml - 750ml",
-    material: "Natural Horn",
+    dimensions: "Custom Sizes Available",
+    material: "Natural Buffalo & Cattle Horn",
     origin: "Sambhal, India",
-    description: "Handcrafted Viking-style drinking mug made from genuine buffalo horn, polished to preserve its unique natural character and traditional appearance.",
-    texture: "Glossy polished finish with rich natural horn patterns.",
-    sustainable: "Crafted from sustainably sourced natural buffalo horn.",
-    imageAlt: "Handcrafted horn Viking mug",
+    description: "Premium horn rolls manufactured from natural buffalo and cattle horn for button production, knife handles, handicrafts, jewelry, eyewear, and custom industrial applications.",
+    texture: "Natural rolled horn with smooth polished finish.",
+    sustainable: "Manufactured using sustainable processing techniques and responsibly sourced horn.",
+    imageAlt: "Natural horn roll",
     grainPattern: "Natural Horn Roll"
   },
   {
-    id: 21,
+    id: 27,
     name: "Horn Viking Mug",
     category: "Other",
     dimensions: "250ml - 750ml",
-    material: "Natural Horn",
+    material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
-    description: "Handcrafted Viking-style drinking mug made from genuine buffalo horn, polished to preserve its unique natural character and traditional appearance.",
-    texture: "Glossy polished finish with rich natural horn patterns.",
-    sustainable: "Crafted from sustainably sourced natural buffalo horn.",
-    imageAlt: "Handcrafted horn Viking mug",
+    description: "Traditional handcrafted Viking drinking mugs made from genuine buffalo horn, ideal for gifts, home décor, historical reenactments, and premium drinkware collections.",
+    texture: "Glossy polished finish showcasing natural horn grain.",
+    sustainable: "Handcrafted from ethically sourced buffalo horn with minimal waste.",
+    imageAlt: "Handcrafted buffalo horn Viking mug",
     grainPattern: "Natural Horn Swirl"
   },
   {
-    id: 22,
+    id: 28,
     name: "Buffalo Horn Tip",
     category: "Other",
     dimensions: "40mm - 120mm",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
-    description: "Premium buffalo horn tips crafted from natural horn, ideal for walking sticks, handles, decorative accessories, and custom handcrafted products.",
-    texture: "Smooth polished finish with natural horn grain.",
-    sustainable: "Made from ethically sourced natural buffalo horn by-products.",
+    description: "Premium buffalo horn tips manufactured for walking sticks, umbrella handles, knife handles, decorative crafts, and custom woodworking applications.",
+    texture: "Smooth polished natural horn finish.",
+    sustainable: "Produced from responsibly sourced buffalo horn by-products.",
     imageAlt: "Natural buffalo horn tip",
-    grainPattern: "Natural Buffalo Horn"
+    grainPattern: "Natural Buffalo Horn Tip"
   },
   {
-    id: 23,
+    id: 29,
     name: "Cattle Horn Tip",
     category: "Other",
     dimensions: "40mm - 120mm",
+    material: "Natural Cattle Horn",
+    origin: "Sambhal, India",
+    description: "Premium cattle horn tips carefully processed for walking sticks, knife handles, umbrella handles, decorative accessories, handicrafts, and custom manufacturing applications.",
+    texture: "Smooth polished finish with natural cattle horn grain and durable structure.",
+    sustainable: "Made from responsibly sourced natural cattle horn using eco-friendly production methods.",
+    imageAlt: "Natural cattle horn tip",
+    grainPattern: "Natural Cattle Horn Tip"
+  },
+  {
+    id: 30,
+    name: "Dog Food Bowl",
+    category: "Other",
+    dimensions: "Small, Medium & Large",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
-    description: "Premium cattle horn tips crafted from natural horn, ideal for walking sticks, handles, decorative accessories, and custom handcrafted products.",
-    texture: "Smooth polished finish with natural horn grain.",
-    sustainable: "Made from ethically sourced natural cattle horn by-products.",
-    imageAlt: "Natural cattle horn tip",
-    grainPattern: "Natural Cattle Horn"
+    description: "Handcrafted natural buffalo horn dog food bowls designed for pet feeding. Durable, food-safe, eco-friendly, and finished to highlight the unique natural horn patterns.",
+    texture: "Smooth polished interior with naturally patterned exterior.",
+    sustainable: "Crafted from ethically sourced buffalo horn by-products using sustainable manufacturing practices.",
+    imageAlt: "Handcrafted natural buffalo horn dog food bowl",
+    grainPattern: "Natural Dog Food Bowl"
+  },
+  {
+    id: 31,
+    name: "Horn & Bone Handicrafts",
+    category: "Other",
+    dimensions: "Custom Sizes Available",
+    material: "Natural Horn & Bone",
+    origin: "Sambhal, India",
+    description: "A premium collection of handcrafted horn and bone products including decorative items, home décor, fashion accessories, gift articles, jewelry components, and custom artisan products.",
+    texture: "Hand-polished finish with distinctive natural grain patterns.",
+    sustainable: "Manufactured from responsibly sourced natural horn and bone with minimal waste.",
+    imageAlt: "Handcrafted horn and bone products",
+    grainPattern: "Natural Horn & Bone"
+  },
+  {
+    id: 32,
+    name: "Sheep Horn",
+    category: "Other",
+    dimensions: "Natural Sizes Available",
+    material: "Natural Sheep Horn",
+    origin: "Sambhal, India",
+    description: "Premium natural sheep horns carefully cleaned and processed for handicrafts, decorative applications, musical instruments, pet chews, traditional artwork, and custom manufacturing.",
+    texture: "Natural curved horn with smooth polished finish and authentic grain.",
+    sustainable: "Responsibly sourced natural sheep horn processed using environmentally conscious methods.",
+    imageAlt: "Natural sheep horn",
+    grainPattern: "Natural Sheep Horn"
   },
 ];
 
-export const getProductImages = (product: Product) => {
+export const getProductImages = (product: Product) => { 
   const images: { type: "vector" | "photo"; url?: string; label: string }[] = [];
   
   if (product.category === "Button Blanks") {
@@ -534,11 +668,6 @@ export const getProductImages = (product: Product) => {
         url: buffalo_horn_color2,
         label: "Saturated Organic Crafted Blanks"
       });
-      images.push({
-        type: "photo",
-        url: buffalo_horn_color3,
-        label: "Saturated Organic Crafted Blanks"
-      });
     } else if (product.grainPattern === "Blush Rose Hue") {
       images.push({
         type: "photo",
@@ -573,34 +702,6 @@ export const getProductImages = (product: Product) => {
         url: DarkPink2,
         label: "Deep Hand-Polished Magenta Grain"
       });
-    } else if (product.grainPattern === "Natural Buffalo Horn") {
-      images.push({
-        type: "photo",
-        url: Buffalo_horn1,
-        label: "Bespoke Crimson Fabric Backdrop"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn2,
-        label: "Polished Crimson Obsidian Shell"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn3,
-        label: "Polished Crimson Obsidian Shell2"
-      });
-    } else if (product.grainPattern === "Natural Cattle Horn") {
-      images.push({
-        type: "photo",
-        url: Cattle_horn1,
-        label: "Bespoke Crimson Fabric Backdrop"
-      });
-      images.push({
-        type: "photo",
-        url: Cattle_horn2,
-        label: "Polished Crimson Obsidian Shell"
-      });
-   
     } else if (product.grainPattern === "Earthy Dyed Tones") {
       images.push({
         type: "photo",
@@ -612,15 +713,85 @@ export const getProductImages = (product: Product) => {
         url: CattleHorn2,
         label: "Swirling Amber Natural Veins"
       });
-    } else if (product.grainPattern === "Crimson Rose Hue") {
+    } else if (product.grainPattern === "Buffalo Hollow Black Button Blanks") {
       images.push({
         type: "photo",
-        url: horntip1,
+        url: Buffalo_Black_hollow_button1,
         label: "Bespoke Crimson Fabric Backdrop"
       });
       images.push({
         type: "photo",
-        url: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+        url: Buffalo_Black_hollow_button2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_Black_hollow_button3,
+        label: "Deep Hand-Polished Magenta Grain"
+      });
+    } else if (product.grainPattern === "Buffalo Hollow Color Button Blanks") {
+      images.push({
+        type: "photo",
+        url: Buffalo_color_hollow_button1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_color_hollow_button2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_color_hollow_button3,
+        label: "Deep Hand-Polished Magenta Grain"
+      });
+    } else if (product.grainPattern === "Cattle Hollow Color Button Blanks") {
+      images.push({
+        type: "photo",
+        url: Cattle_color_hollow_button1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_color_hollow_button2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_color_hollow_button3,
+        label: "Deep Hand-Polished Magenta Grain"
+      });
+    } else if (product.grainPattern === "Buffalo Hollow Horn Skin Button Blanks") {
+      images.push({
+        type: "photo",
+        url: Buffalo_Hollow_Horn_Skin_Button1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_Hollow_Horn_Skin_Button2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+    } else if (product.grainPattern === "Cattle Black Button Blanks") {
+      images.push({
+        type: "photo",
+        url: Cattle_Black_Button1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_Black_Button2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+    } else if (product.grainPattern === "Cattle White Spot Button Blanks") {
+      images.push({
+        type: "photo",
+        url: Cattle_White_Spot_Button1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_White_Spot_Button2,
         label: "Polished Crimson Obsidian Shell"
       });
     } else {
@@ -669,6 +840,11 @@ export const getProductImages = (product: Product) => {
       images.push({
         type: "photo",
         url: buffalo_horn_color_plate2,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: buffalo_horn_color_plate3,
         label: "Speckled White Marble Core Plate"
       });
     
@@ -763,6 +939,11 @@ export const getProductImages = (product: Product) => {
         url: horn_roll2,
         label: "Polished Crimson Obsidian Shell2"
       });
+      images.push({
+        type: "photo",
+        url: horn_roll3,
+        label: "Polished Crimson Obsidian Shell3"
+      });
     } else if (product.grainPattern === "Natural bone plate") {
       images.push({
         type: "photo",
@@ -774,6 +955,54 @@ export const getProductImages = (product: Product) => {
         url: bone_plate2,
         label: "Polished Crimson Obsidian Shell2"
       });
+    }else if (product.grainPattern === "Natural Buffalo Horn Tip") {
+      images.push({
+        type: "photo",
+        url: Buffalo_horn1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_horn2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_horn3,
+        label: "Polished Crimson Obsidian Shell3"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_horn4,
+        label: "Polished Crimson Obsidian Shell4"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_horn5,
+        label: "Polished Crimson Obsidian Shell5"
+      });
+      images.push({
+        type: "photo",
+        url: Buffalo_horn6,
+        label: "Polished Crimson Obsidian Shell6"
+      });
+    } else if (product.grainPattern === "Natural Cattle Horn Tip") {
+      images.push({
+        type: "photo",
+        url: Cattle_horn1,
+        label: "Bespoke Crimson Fabric Backdrop"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_horn2,
+        label: "Polished Crimson Obsidian Shell"
+      });
+      images.push({
+        type: "photo",
+        url: Cattle_horn3,
+        label: "Polished Crimson Obsidian Shell"
+      });
+   
     } else if (product.grainPattern === "Cattle Horn Color Plate") {
       images.push({
         type: "photo",
@@ -785,15 +1014,63 @@ export const getProductImages = (product: Product) => {
         url: Cattle_color_plate2,
         label: "Speckled White Marble Core Plate"
       });
+    } else if (product.grainPattern === "Natural Dog Food Bowl") {
+      images.push({
+        type: "photo",
+        url: Dog_food_bowl1,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Dog_food_bowl2,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Dog_food_bowl3,
+        label: "Speckled White Marble Core Plate"
+      });
+    } else if (product.grainPattern === "Natural Horn & Bone") {
+      images.push({
+        type: "photo",
+        url: Handicraft_product1,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Handicraft_product2,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Handicraft_product3,
+        label: "Speckled White Marble Core Plate"
+      });
+    } else if (product.grainPattern === "Natural Sheep Horn") {
+      images.push({
+        type: "photo",
+        url: Sheep_horn1,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Sheep_horn2,
+        label: "Speckled White Marble Core Plate"
+      });
+      images.push({
+        type: "photo",
+        url: Sheep_horn3,
+        label: "Speckled White Marble Core Plate"
+      });
     } else {
       images.push({
         type: "photo",
-        url: horntip2,
+        url: Buffalo_horn5,
         label: "Premium Flattened Core Slab"
       });
       images.push({
         type: "photo",
-        url: horntip3,
+        url: HornVikingMug2,
         label: "Polished Horn Veneer"
       });
     }

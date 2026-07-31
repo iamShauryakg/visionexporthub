@@ -46,12 +46,14 @@ export interface HeroSlide {
 }
 
 export interface Hero3DMaterial {
+  id?: string;
   name: string;
   subtitle: string;
   grain: string;
   finish: string;
   b2bMoq: string;
   source: string;
+  image?: string;
   colors: {
     front: string;
     back: string;

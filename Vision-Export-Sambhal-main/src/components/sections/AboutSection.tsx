@@ -59,8 +59,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-16 h-1 bg-zinc-950 mx-auto mt-4 mb-6"></div>
           <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-semibold">
-            Based in Sambhal, India, we carry forward generations of sustainable horn carving. By-product animal horn and bovine bone materials are transformed into custom calibrated button blanks, sheets, and fine jewelry components.
-          </p>
+            Based in Sambhal UP, India, is a leading manufacturer and global exporter of premium-quality natural horn and bone products. With decades of expertise in traditional craftsmanship and modern manufacturing, we specialize in producing high-quality horn and bone materials for the fashion, garment accessories, button manufacturing, handicrafts, and luxury goods industries. Our commitment to superior quality, ethical sourcing, precision craftsmanship, and reliable worldwide supply has earned us the trust of customers across international markets.          </p>
           
           <div className="mt-6 inline-flex items-center space-x-2 bg-zinc-950/5 hover:bg-zinc-950/10 transition-colors py-2.5 px-5 rounded-full border border-zinc-200 cursor-help">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-zinc-950 animate-ping"></span>

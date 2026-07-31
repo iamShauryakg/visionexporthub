@@ -1,10 +1,11 @@
 import { HeroSlide, Hero3DMaterial, VisionGalleryItem, PartnerBrand, ArchitectureSpec, ManufacturingStep, Testimonial, FAQItem } from "../types";
-import rawimage1 from "../images/Manufacture/file_00000000dbac71fa81a0b8c3a0687fe9.png";
-import rawimage2 from "../images/Manufacture/file_00000000204072079b844f051a6da486.png";
-import rawimage3 from "../images/Manufacture/IMG-20260619-WA0004.jpg";
+import rawimage1 from "../images/Raw Materials & Blanks/1.png";
+import rawimage2 from "../images/Raw Materials & Blanks/2.png";
+import rawimage3 from "../images/Raw Materials & Blanks/3.png";
 import Heroimage1 from "../images/heroIMG/hero.png";
 import Heroimage2 from "../images/heroIMG/hero2.png";
 import Heroimage3 from "../images/heroIMG/hero3.png";
+
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
@@ -29,55 +30,61 @@ export const HERO_SLIDES: HeroSlide[] = [
 
 export const HERO_3D_MATERIALS: Hero3DMaterial[] = [
   {
-    name: "Obsidian Deep Buffalo Horn",
-    subtitle: "STRICT SELECTION • RE-FINISHED",
-    grain: "Solid Deep Black Uniform Grain",
-    finish: "Mirror Polished Raw Veneer",
-    b2bMoq: "2,500 Units",
-    source: "Uttar Pradesh organic farms",
+    id: "golden-amber-plate",
+    name: "Golden Amber Horn Plate",
+    subtitle: "NATURAL HONEY AMBER • FLAT PLATE",
+    grain: "Fine Vertical Honey Amber Grain",
+    finish: "High Gloss Hand Polished Veneer",
+    b2bMoq: "200 KG",
+    source: "Sambhal Craft Hub, UP, India",
+    image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=1000&q=80",
     colors: {
-      front: "linear-gradient(135deg, #18181b 0%, #09090b 50%, #27272a 100%)",
-      back: "linear-gradient(135deg, #09090b 0%, #18181b 100%)",
-      side: "#121214",
-      accent: "#a1a1aa"
+      front: "linear-gradient(180deg, #f59e0b 0%, #d97706 40%, #b45309 80%, #78350f 100%)",
+      back: "linear-gradient(180deg, #d97706 0%, #b45309 60%, #78350f 100%)",
+      side: "#92400e",
+      accent: "#fef3c7"
     },
-    shadingClass: "from-zinc-950 via-zinc-900 to-zinc-800",
+    shadingClass: "from-amber-500 via-amber-600 to-amber-800",
     specularPower: 0.9,
-    description: "Sourced with full traceability certifications. Midnight black pigment density for luxury bespoke button manufacturing."
+    description: "Warm golden amber horn plate slab with fine natural vertical grain striae. Precision calibrated for luxury eyewear, artisan cutlery, and bespoke accessories."
   },
   {
-    name: "Sartorial Ivory Bovine Bone",
-    subtitle: "CALIBRATED & DRY-AGED",
-    grain: "Ultra-fine Calcium Matrix",
-    finish: "Fine Satin Natural Polish",
-    b2bMoq: "5,000 Units",
-    source: "Sambhal region sustainable herds",
+    id: "deep-mahogany-plate",
+    name: "Deep Mahogany Horn Plate",
+    subtitle: "AUBURN REDDISH BROWN • FLAT PLATE",
+    grain: "Rich Wavy Auburn Chestnut Grain",
+    finish: "Silk Smooth Satin Polish",
+    b2bMoq: "200 KG",
+    source: "Indo-Gangetic Organic Herds",
+    image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=1000&q=80",
     colors: {
-      front: "linear-gradient(135deg, #fdfbf7 0%, #f4f1ea 50%, #faf8f5 100%)",
-      back: "linear-gradient(135deg, #f4f1ea 0%, #fdfbf7 100%)",
-      side: "#ebe7de",
-      accent: "#b45309"
+      front: "linear-gradient(180deg, #7f1d1d 0%, #991b1b 30%, #450a0a 70%, #292524 100%)",
+      back: "linear-gradient(180deg, #991b1b 0%, #450a0a 100%)",
+      side: "#450a0a",
+      accent: "#fca5a5"
     },
-    shadingClass: "from-stone-50 via-[#FDFCFA] to-amber-50/30",
-    specularPower: 0.5,
-    description: "Fully organic structural bone blanks. Rigorously processed to remove natural marrow fats, providing uniform ivory coloration."
+    shadingClass: "from-red-900 via-stone-900 to-zinc-950",
+    specularPower: 0.85,
+    description: "Rich deep reddish-brown mahogany horn plate with expressive wavy fibrous veins. High strength and dense organic structure."
   },
   {
-    name: "Tiger Marbled Exotic Horn",
-    subtitle: "PRESTIGE CUT • HIGHLY SELECTED",
-    grain: "Translucent Cream with Amber Veins",
-    finish: "Raw Translucent Polish",
-    b2bMoq: "1,500 Units",
-    source: "Indo-Gangetic organic herds",
+    id: "onyx-streak-amber-plate",
+    name: "Onyx Streak Amber Horn Plate",
+    subtitle: "EXOTIC TWO-TONE MARBLED • FLAT PLATE",
+    grain: "Amber Canvas with Obsidian Onyx Stripe",
+    finish: "Mirror Polished Dual Tone",
+    b2bMoq: "200 KG",
+    source: "Selected Sambhal Reserve Horns",
+    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
     colors: {
-      front: "linear-gradient(135deg, #451a03 0%, #d97706 40%, #fef3c7 80%, #78350f 100%)",
-      back: "linear-gradient(135deg, #78350f 0%, #d97706 100%)",
-      side: "#5c2b0b",
+      front: "linear-gradient(90deg, #18181b 0%, #27272a 22%, #d97706 45%, #f59e0b 70%, #b45309 100%)",
+      back: "linear-gradient(90deg, #27272a 0%, #b45309 50%, #d97706 100%)",
+      side: "#3f3f46",
       accent: "#fbbf24"
     },
-    shadingClass: "from-amber-950 via-amber-700 to-[#FDFCFA]",
+    shadingClass: "from-zinc-950 via-amber-700 to-amber-500",
     specularPower: 0.95,
-    description: "Rare biological grain patterns showcasing dynamic multi-tone striations. Ideal for bespoke suiting and luxury accessories."
+    description: "Striking two-tone natural horn slab featuring a prominent obsidian black streak running alongside warm honey-amber grain. Highly sought after for unique luxury crafts."
   }
 ];
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Eye, Cpu, Maximize2, ShieldCheck, Scale, Droplet, Layers, Search, Compass, FileSpreadsheet, ChevronRight, Sparkles, AlertCircle } from "lucide-react";
-import rawImage1 from "../../images/Manufacture/file_00000000c2e0720b9c53ed08eefe5e14.png";
-import rawImage2 from "../../images/Manufacture/file_0000000043107207804a9f9b21053f9f.png";
-import rawImage3 from "../../images/Manufacture/file_0000000050b8720b9a2755d7d6243648.png";
+import rawImage1 from "../../images/Raw Materials & Blanks/1.png";
+import rawImage2 from "../../images/Raw Materials & Blanks/2.png";
+import rawImage3 from "../../images/Raw Materials & Blanks/3.png";
 
 interface RawButtonSpecimen {
   id: number;
