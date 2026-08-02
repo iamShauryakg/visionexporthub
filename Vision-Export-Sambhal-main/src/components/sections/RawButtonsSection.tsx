@@ -254,7 +254,7 @@ Generated dynamically via Vision Material Desk (Sambhal, India)
                       alt={spec.name}
                       referrerPolicy="no-referrer"
                       loading="lazy"
-                      className="w-4/5 h-4/5 object-cover rounded-none filter transition-all duration-700 ease-out group-hover:scale-105 brightness-90 group-hover:brightness-100 contrast-105 border border-zinc-800/50"
+                      className="w-full h-4/6 object-cover rounded-none filter transition-all duration-700 ease-out group-hover:scale-105 brightness-90 group-hover:brightness-100 contrast-105 border border-zinc-800/50"
                     />
 
                     {/* Technical scanning coordinate indicators */}

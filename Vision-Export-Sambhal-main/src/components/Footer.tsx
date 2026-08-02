@@ -116,7 +116,7 @@ export default function Footer({ whatsappNumber, onOpenLegal, onOpenConfig, onNa
             </h4>
             <div className="text-xs font-sans text-zinc-500 leading-relaxed font-medium">
               <strong className="text-zinc-950">Vision Manufacturing Complex:</strong><br />
-              Chaudhary Sarai, Sambhal Manufacturing District,<br />
+              Saraitareen, Sambhal Manufacturing District,<br />
               Uttar Pradesh, Pin 244302, India
               <br />
               <a 

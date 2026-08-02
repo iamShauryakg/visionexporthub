@@ -94,17 +94,10 @@ export default function CoutureHero({ companyName, heroImages }: CoutureHeroProp
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-sm sm:text-base text-zinc-300 leading-relaxed max-w-2xl font-medium tracking-wide"
+            className="text-sm sm:text-base text-zinc-300 leading-relaxed max-w-4xl font-medium tracking-wide"
           >
             Located in one of India's renowned centers for traditional horn craftsmanship, we combine skilled artisanal expertise with modern manufacturing techniques to produce high-quality Buffalo Horn Button Blanks, Cow Horn Button Blanks, Horn Toggles, Horn Tips, Horn Plates, and a wide range of Bone Products. Our products are valued for their natural beauty, durability, unique color variations, and eco-friendly appeal.
-          </motion.p>
-
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-sm sm:text-base text-zinc-300 leading-relaxed max-w-2xl font-medium tracking-wide"
-          >
+       
             With a strong commitment to quality, consistency, and customer satisfaction, we serve manufacturers, wholesalers, importers, and distributors worldwide, offering customized solutions and reliable export services. Our dedication to craftsmanship and sustainable sourcing ensures that every product reflects the authenticity and elegance of natural horn and bone materials.
 
           </motion.p>

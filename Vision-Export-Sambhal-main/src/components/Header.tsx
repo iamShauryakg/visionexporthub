@@ -66,11 +66,11 @@ export default function Header({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Brand Logo */}
           <a 
-            href="#" 
+            href="/" 
             onClick={(e) => {
               e.preventDefault();
               if (onNavigate) {
-                onNavigate("home", "#hero");
+                onNavigate("/", "#hero");
               }
             }}
             className="flex items-center space-x-3 group" 
@@ -129,7 +129,7 @@ export default function Header({
               onClick={(e) => {
                 if (onNavigate) {
                   e.preventDefault();
-                  onNavigate("home", "#hero");
+                  onNavigate("/", "#hero");
                 }
               }}
               className={`relative py-1 hover:text-amber-500 transition-colors duration-300 group ${activeView === "home" ? "text-amber-500" : ""}`}
@@ -188,7 +188,7 @@ export default function Header({
               Technical Specs
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
             </motion.a>
-            <motion.a 
+            {/* <motion.a 
               variants={{
                 hidden: { opacity: 0, y: -8 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
@@ -204,7 +204,7 @@ export default function Header({
             >
               Quality Matrix
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
-            </motion.a>
+            </motion.a> */}
             <motion.a 
               variants={{
                 hidden: { opacity: 0, y: -8 },
@@ -335,7 +335,7 @@ export default function Header({
                       onClick={(e) => {
                         e.preventDefault();
                         setMobileMenuOpen(false);
-                        if (onNavigate) onNavigate("home", "#hero");
+                        if (onNavigate) onNavigate("/", "#hero");
                       }}
                       className={`group py-2 border-b flex justify-between items-center transition-colors ${theme === "dark" ? "border-zinc-800 text-zinc-200 hover:text-amber-500" : "border-zinc-200/80 text-zinc-800 hover:text-amber-600"}`}
                     >
@@ -378,7 +378,7 @@ export default function Header({
                       <span className="font-bold">04. TECHNICAL SPECS</span>
                       <span className={`text-[10px] font-mono group-hover:text-amber-500 uppercase tracking-widest transition-colors ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>[ METRICS ]</span>
                     </a>
-                    <a
+                    {/* <a
                       href="#qc"
                       onClick={(e) => {
                         e.preventDefault();
@@ -389,7 +389,7 @@ export default function Header({
                     >
                       <span className="font-bold">05. QUALITY MATRIX</span>
                       <span className={`text-[10px] font-mono group-hover:text-amber-500 uppercase tracking-widest transition-colors ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>[ STANDARDS ]</span>
-                    </a>
+                    </a> */}
                     <a
                       href="#sustainability"
                       onClick={(e) => {
@@ -399,7 +399,7 @@ export default function Header({
                       }}
                       className={`group py-2 border-b flex justify-between items-center transition-colors ${theme === "dark" ? "border-zinc-800 text-zinc-200 hover:text-amber-500" : "border-zinc-200/80 text-zinc-800 hover:text-amber-600"}`}
                     >
-                      <span className="font-bold">06. SUSTAINABILITY</span>
+                      <span className="font-bold">05. SUSTAINABILITY</span>
                       <span className={`text-[10px] font-mono group-hover:text-amber-500 uppercase tracking-widest transition-colors ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>[ BY-PRODUCT ]</span>
                     </a>
                     <a
@@ -411,7 +411,7 @@ export default function Header({
                       }}
                       className={`group py-2 border-b flex justify-between items-center transition-colors ${theme === "dark" ? "border-zinc-800 text-zinc-200 hover:text-amber-500" : "border-zinc-200/80 text-zinc-800 hover:text-amber-600"}`}
                     >
-                      <span className="font-bold">07. EXPORT DESK</span>
+                      <span className="font-bold">06. EXPORT DESK</span>
                       <span className={`text-[10px] font-mono group-hover:text-amber-500 uppercase tracking-widest transition-colors ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>[ DISPATCH ]</span>
                     </a>
                   </div>

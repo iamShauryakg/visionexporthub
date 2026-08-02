@@ -345,6 +345,21 @@ export default function ZoomModal({
                         <option value="70x170mm (4mm)">70x170mm (4mm)</option>
                         <option value="80x200mm (5mm)">80x200mm (5mm) - Heavy</option>
                       </>
+                    ) : product.category === "Toggle" ? (
+                        <>
+                        <option value="50x150mm (3mm)">30 × 10 mm</option>
+                        <option value="60x160mm (4mm)">40 × 12 mm</option>
+                        <option value="70x170mm (4mm)">45 × 12 mm</option>
+                        <option value="80x200mm (5mm)">50 × 14 mm</option>
+                        <option value="80x200mm (5mm)">55 × 15 mm</option>
+                        <option value="80x200mm (5mm)">60 × 16 mm</option>
+                        <option value="80x200mm (5mm)">65 × 18 mm</option>
+                        <option value="80x200mm (5mm)">70 × 18 mm</option>
+                        <option value="80x200mm (5mm)">75 × 20 mm</option>
+                        <option value="80x200mm (5mm)">80 × 20 mm</option>
+                        <option value="80x200mm (5mm)">90 × 22 mm</option>
+                        <option value="80x200mm (5mm)">100 × 25 mm</option>
+                        </>
                     ) : (
                       <>
                         <option value="250ml">250ml</option>
@@ -356,6 +371,7 @@ export default function ZoomModal({
                     )}
                   </select>
                 </div>
+                
 
                 <div className="space-y-1.5 text-left">
                   <label className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-wider block">

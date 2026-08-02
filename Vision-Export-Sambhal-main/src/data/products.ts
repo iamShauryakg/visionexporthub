@@ -36,7 +36,6 @@ import CattleHorn2 from "../images/Button blanks/Cattle Color Button/Color No 2.
 import DarkPink1 from "../images/Dark Pink/1.png"
 import DarkPink2 from "../images/Dark Pink/2.png"
 
-
 import Lightpink1 from "../images/Light pink/1.png"
 import Lightpink2 from "../images/Light pink/2.png"
 
@@ -411,7 +410,7 @@ export const PRODUCTS: Product[] = [
     texture: "Smooth polished ivory surface with fine natural bone grain.",
     sustainable: "Manufactured from ethically sourced natural bone using sustainable production methods.",
     imageAlt: "Natural bone plate",
-    grainPattern: "Natural Bone Plate"
+    grainPattern: "Natural Bone Plates"
   },
   {
     id: 23,
@@ -429,7 +428,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 24,
     name: "Buffalo Horn Toggle",
-    category: "Other",
+    category: "Toggle",
     dimensions: "30mm - 60mm",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
@@ -442,7 +441,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 25,
     name: "Cattle Horn Toggles",
-    category: "Other",
+    category: "Toggle",
     dimensions: "30mm - 60mm",
     material: "Natural Cattle Horn",
     origin: "Sambhal, India",
@@ -944,18 +943,7 @@ export const getProductImages = (product: Product) => {
         url: horn_roll3,
         label: "Polished Crimson Obsidian Shell3"
       });
-    } else if (product.grainPattern === "Natural bone plate") {
-      images.push({
-        type: "photo",
-        url: bone_plate1,
-        label: "Bespoke Crimson Fabric Backdrop"
-      });
-      images.push({
-        type: "photo",
-        url: bone_plate2,
-        label: "Polished Crimson Obsidian Shell2"
-      });
-    }else if (product.grainPattern === "Natural Buffalo Horn Tip") {
+    } else if (product.grainPattern === "Natural Buffalo Horn Tip") {
       images.push({
         type: "photo",
         url: Buffalo_horn1,
@@ -1003,6 +991,17 @@ export const getProductImages = (product: Product) => {
         label: "Polished Crimson Obsidian Shell"
       });
    
+    } else if (product.grainPattern === "Natural Bone Plates") {
+      images.push({
+        type: "photo",
+        url: bone_plate1,
+        label: "Bespoke Crimson Fabric Backdrop1"
+      });
+      images.push({
+        type: "photo",
+        url: bone_plate2,
+        label: "Polished Crimson Obsidian Shell2"
+      });
     } else if (product.grainPattern === "Cattle Horn Color Plate") {
       images.push({
         type: "photo",
