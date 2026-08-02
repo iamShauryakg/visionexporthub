@@ -61,7 +61,7 @@ export default function Footer({ whatsappNumber, onOpenLegal, onOpenConfig, onNa
             </div>
             
             <p className="text-xs text-zinc-500 font-sans leading-relaxed font-medium">
-              Since our founding in Sambhal, India, Vision Import & Export has served as the preferred B2B manufacturing partner for premium fashion labels globally. We source, process, and shape ethical buffalo horn and bone material into curated buttons, blanks, plates, and flat sheets.
+              Vision Import & Export is a B2B manufacturer and exporter of ethically sourced buffalo horn, cattle horn, and bone products, producing premium button blanks, plates, toggles, and custom components for global fashion and accessory brands. We combine traditional craftsmanship with modern manufacturing to deliver consistent, sustainable, export-quality solutions.
             </p>
 
             <div className="pt-2">

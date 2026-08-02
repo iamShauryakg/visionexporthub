@@ -367,8 +367,7 @@ export default function ProductsSection({
               Exhibition Lookbook
             </h2>
             <p className="text-xs sm:text-sm text-zinc-600 font-semibold leading-relaxed">
-              Curated biological specimens carved in Sambhal. Toggle material configurations, simulate authentic hand-polished luster, and request custom volume trade quotes.
-            </p>
+              Expertly handcrafted in Sambhal, India, our premium natural horn and bone materials are ethically sourced and meticulously crafted by skilled artisans. Renowned for their authentic handmade luster, unique natural patterns, and exceptional quality, our products are available in a wide range of standard and custom configurations to meet diverse manufacturing requirements. We proudly serve global buyers across the fashion, accessories, handicrafts, and button industries, offering reliable production, consistent quality, and competitive volume pricing. Contact us for bespoke horn material solutions and customized bulk trade quotations.            </p>
           </motion.div>
 
           {/* Sleek Floating Pill Category Selector */}

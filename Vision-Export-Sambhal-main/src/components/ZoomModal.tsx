@@ -368,18 +368,18 @@ export default function ZoomModal({
                   >
                     {product.category === "Button Blanks" ? (
                       <>
-                        <option value={500}>500 KG (Trial)</option>
-                        <option value={1000}>1000 KG (Standard)</option>
+                        <option value={500}>500 KG </option>
+                        <option value={1000}>1000 KG </option>
                         <option value={2500}>2500 KG</option>
-                        <option value={5000}>5000 KG (Value)</option>
-                        <option value={10000}>10000+ KG (FOB)</option>
+                        <option value={5000}>5000 KG </option>
+                        <option value={10000}>10000+ KG </option>
                       </>
                     ) : (
                       <>
-                        <option value={200}>200 plates (Trial)</option>
-                        <option value={500}>500 plates (Standard)</option>
+                        <option value={200}>200 plates </option>
+                        <option value={500}>500 plates </option>
                         <option value={1000}>1,000 plates</option>
-                        <option value={5000}>5,000+ plates (Container)</option>
+                        <option value={5000}>5,000+ plates </option>
                       </>
                     )}
                   </select>

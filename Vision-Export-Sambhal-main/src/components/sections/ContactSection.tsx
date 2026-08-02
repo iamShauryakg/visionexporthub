@@ -81,15 +81,15 @@ const HUBS: Record<string, HubDetail> = {
     mapUrl: "https://maps.google.com/maps?q=Chaudhary%20Sarai,%20Sambhal,%20Uttar%20Pradesh%20244302&t=&z=14&ie=UTF8&iwloc=&output=embed",
     details: "Raw material harvesting, ethical bone & horn processing, initial block carving, custom dyeing, and bulk shipment logistics.",
   },
-  milan: {
-    name: "Milan Design Base",
+  China: {
+    name: "China Design Base",
     role: "Bespoke Couture Design & CAD Studio",
     coordinates: "45.4642° N • 9.1900° E",
     phone: "+39 02 824 5510",
-    email: "milan@visionexporthub.com",
+    email: "China@visionexporthub.com",
     timezone: "CET",
-    address: "Via Montenapoleone, Milan, Italy",
-    mapUrl: "https://maps.google.com/maps?q=Duomo%20di%20Milano,%20Milan,%20Italy&t=&z=14&ie=UTF8&iwloc=&output=embed",
+    address: "Via Montenapoleone, China, Italy",
+    mapUrl: "https://maps.google.com/maps?q=Duomo%20di%20Chinao,%20Milan,%20Italy&t=&z=14&ie=UTF8&iwloc=&output=embed",
     details: "High-end product drafting, 3D CAD calibration, virtual showroom rendering, and client procurement meetings for European fashion houses.",
   },
   mundra: {
@@ -129,15 +129,15 @@ export default function ContactSection({ whatsappNumber }: ContactSectionProps) 
   const [selectedHubKey, setSelectedHubKey] = useState<keyof typeof HUBS>("sambhal");
 
   // Local Live Time tracking for "Global Presence" Desk
-  const [localTimes, setLocalTimes] = useState({ milan: "", IST: "" });
+  const [localTimes, setLocalTimes] = useState({ China: "", IST: "" });
 
   useEffect(() => {
     const updateTimes = () => {
       const optionsIST = { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false } as const;
-      const optionsMilan = { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false } as const;
+      const optionsChina = { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false } as const;
       
       setLocalTimes({
-        milan: new Intl.DateTimeFormat("en-US", optionsMilan).format(new Date()),
+        China: new Intl.DateTimeFormat("en-US", optionsChina).format(new Date()),
         IST: new Intl.DateTimeFormat("en-US", optionsIST).format(new Date()),
       });
     };
@@ -914,7 +914,7 @@ export default function ContactSection({ whatsappNumber }: ContactSectionProps) 
                     }`}
                   >
                     <div className="flex flex-col items-center space-y-1">
-                      {key === "milan" ? (
+                      {key === "China" ? (
                         <Globe className="w-3.5 h-3.5" />
                       ) : key === "sambhal" ? (
                         <Compass className="w-3.5 h-3.5" />
@@ -966,7 +966,7 @@ export default function ContactSection({ whatsappNumber }: ContactSectionProps) 
                   <div className="flex items-center space-x-1 bg-surface-secondary px-2 py-0.5 border border-border-primary/40">
                     <Clock className="w-3 h-3 text-amber-500" />
                     <span className="font-mono text-[9px] font-bold text-text-primary">
-                      {HUBS[selectedHubKey].timezone === "CET" ? localTimes.milan : localTimes.IST} {HUBS[selectedHubKey].timezone}
+                      {HUBS[selectedHubKey].timezone === "CET" ? localTimes.China : localTimes.IST} {HUBS[selectedHubKey].timezone}
                     </span>
                   </div>
                 </div>
