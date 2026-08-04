@@ -481,7 +481,9 @@ Please share availability, standard lead times, and FOB shipping prices from Sam
 
       {activeView === "home" ? (
         <>
+        <PremiumTactileContainer theme={theme} id="hero">
           <CoutureHero companyName={companyName} />
+        </PremiumTactileContainer>
 
           <ScrollRevealDivider />
 

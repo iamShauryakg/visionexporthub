@@ -26,7 +26,7 @@ interface ProductsSectionProps {
   handleProductSlideChange?: (productId: number, direction: "next" | "prev" | number, e?: React.MouseEvent) => void;
 }
 
-const CATEGORIES = ["All Materials", "Button Blanks", "Flat Plates", "Other"];
+const CATEGORIES = ["All", "Button Blanks", "Plates", "Toggle", "Horn Tip", "Other"];
 
 interface ProductCardProps extends ProductsSectionProps {
   product: Product;
@@ -115,7 +115,7 @@ function ProductCard({
   const getSizesForProduct = (prod: Product) => {
     if (prod.category === "Button Blanks") {
       return ["14mm", "16mm", "19mm", "21mm", "23mm", "26mm", "29mm", "31mm"];
-    } else if (prod.category === "Flat Plates") {
+    } else if (prod.category === "Plates") {
       return ["60x140mm", "70x170mm", "80x200mm"];
     } else {
       return ["Natural Tips", "Solid Blocks", "Slices (2.5mm)"];

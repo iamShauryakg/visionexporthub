@@ -66,7 +66,7 @@ export default function QualityControlSection() {
           </h2>
           <div className="w-16 h-1 bg-zinc-950 mx-auto mt-4 mb-6"></div>
           <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-semibold">
-            Every batch undergoes five stages of rigorous technical inspection at our Sambhal facility. Zero-defect tolerance for luxury tailoring and accessory designers.
+            Every batch undergoes four stages of rigorous technical inspection at our Sambhal facility. Zero-defect tolerance for luxury tailoring and accessory designers.
           </p>
           <div className="mt-4 flex items-center justify-center space-x-2 bg-white py-2 px-4 rounded-full max-w-max mx-auto border border-zinc-200">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-zinc-950 animate-ping"></span>

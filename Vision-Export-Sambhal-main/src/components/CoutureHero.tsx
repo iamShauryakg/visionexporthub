@@ -85,7 +85,7 @@ export default function CoutureHero({ companyName, heroImages }: CoutureHeroProp
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-mono text-zinc-400 text-xs sm:text-sm uppercase tracking-[0.35em] font-extrabold mt-1"
             >
-              PREMIUM BIOMATERIAL HOUSE
+              PREMIUM Hornmaterial HOUSE
             </motion.p>
           </div>
 

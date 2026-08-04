@@ -338,7 +338,7 @@ export default function ZoomModal({
                         <option value="29mm">29mm</option>
                         <option value="31mm">31mm</option>
                       </>
-                    ) : product.category === "Flat Plates" ? (
+                    ) : product.category === "Plates" ? (
                       <>
                         <option value="50x150mm (3mm)">50x150mm (3mm)</option>
                         <option value="60x160mm (4mm)">60x160mm (4mm)</option>
@@ -359,6 +359,14 @@ export default function ZoomModal({
                         <option value="80x200mm (5mm)">80 × 20 mm</option>
                         <option value="80x200mm (5mm)">90 × 22 mm</option>
                         <option value="80x200mm (5mm)">100 × 25 mm</option>
+                        </>
+                    ) :  product.category === "Horn Tip" ? (
+                        <>
+                        <option value="80x200mm (5mm)">50 – 80 mm</option>
+                        <option value="80x200mm (5mm)">80 – 100 mm</option>
+                        <option value="80x200mm (5mm)">100 – 120 mm</option>
+                        <option value="80x200mm (5mm)">120 – 150  mm</option>
+                        <option value="80x200mm (5mm)">150 – 180 mm</option>
                         </>
                     ) : (
                       <>
@@ -390,7 +398,14 @@ export default function ZoomModal({
                         <option value={5000}>5000 KG </option>
                         <option value={10000}>10000+ KG </option>
                       </>
-                    ) : (
+                    ) : product.category === "Horn Tip" ? (
+                      <>
+                        <option value={200}>200 kg </option>
+                        <option value={500}>500 kg </option>
+                        <option value={1000}>1,000 kg</option>
+                        <option value={5000}>5,000+ kg </option>
+                      </>
+                   ) : (
                       <>
                         <option value={200}>200 plates </option>
                         <option value={500}>500 plates </option>

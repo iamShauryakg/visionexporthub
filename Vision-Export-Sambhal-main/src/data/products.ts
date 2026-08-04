@@ -363,7 +363,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 19,
     name: "Natural Black Buffalo Horn Plates",
-    category: "Flat Plates",
+    category: "Plates",
     dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
@@ -376,7 +376,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 20,
     name: "White Spot Buffalo Horn Plates",
-    category: "Flat Plates",
+    category: "Plates",
     dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
@@ -389,7 +389,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 21,
     name: "Buffalo Horn Color Plates",
-    category: "Flat Plates",
+    category: "Plates",
     dimensions: "50mm x 150mm to 80mm x 200mm (Thickness: 3mm - 8mm)",
     material: "Dyed Natural Buffalo Horn",
     origin: "Sambhal, India",
@@ -402,7 +402,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 22,
     name: "Bone Plate",
-    category: "Flat Plates",
+    category: "Plates",
     dimensions: "30mm - 60mm",
     material: "Natural Bone",
     origin: "Sambhal, India",
@@ -415,7 +415,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 23,
     name: "Cattle Horn Color Plate",
-    category: "Flat Plates",
+    category: "Plates",
     dimensions: "30mm - 60mm",
     material: "Natural Cattle Horn",
     origin: "Sambhal, India",
@@ -480,7 +480,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 28,
     name: "Buffalo Horn Tip",
-    category: "Other",
+    category: "Horn Tip",
     dimensions: "40mm - 120mm",
     material: "Natural Buffalo Horn",
     origin: "Sambhal, India",
@@ -493,7 +493,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 29,
     name: "Cattle Horn Tip",
-    category: "Other",
+    category: "Horn Tip",
     dimensions: "40mm - 120mm",
     material: "Natural Cattle Horn",
     origin: "Sambhal, India",
@@ -805,7 +805,7 @@ export const getProductImages = (product: Product) => {
         label: "Artisan Selection"
       });
     } 
-  } else {
+  } else if (product.category === "Plates") {
     if (product.grainPattern === "Polished Obsidian") {
       images.push({
         type: "photo",
@@ -847,39 +847,31 @@ export const getProductImages = (product: Product) => {
         label: "Speckled White Marble Core Plate"
       });
     
-    } else if (product.grainPattern === "Natural Cattle Horn") {
-         images.push({
+    } else if (product.grainPattern === "Cattle Horn Color Plate") {
+      images.push({
         type: "photo",
-        url: CattleHorntip1,
-        label: "Bespoke Crimson Fabric Backdrop"
+        url: Cattle_color_plate1,
+        label: "Speckled White Marble Core Plate"
       });
       images.push({
         type: "photo",
-        url: CattleHorntip2,
-        label: "Polished Crimson Obsidian Shell"
+        url: Cattle_color_plate2,
+        label: "Speckled White Marble Core Plate"
+      });
+    } else if (product.grainPattern === "Natural Bone Plates") {
+      images.push({
+        type: "photo",
+        url: bone_plate1,
+        label: "Bespoke Crimson Fabric Backdrop1"
       });
       images.push({
         type: "photo",
-        url: CattleHorntip3,
-        label: "Polished Crimson Obsidian Shell"
+        url: bone_plate2,
+        label: "Polished Crimson Obsidian Shell2"
       });
-    } else if (product.grainPattern === "Natural Horn Grain") {
-      images.push({
-        type: "photo",
-        url: HornToggle1,
-        label: "Saturated Organic Crafted Blanks"
-      });
-      images.push({
-        type: "photo",
-        url: HornToggle2,
-        label: "Saturated Organic Crafted Blanks"
-      });
-      images.push({
-        type: "photo",
-        url: HornToggle3,
-        label: "Saturated Organic Crafted Blanks"
-      });
-    } else if (product.grainPattern === "Natural Buffalo Horn Toggle") {
+    } 
+  } else if (product.category === "Toggle") {
+    if (product.grainPattern === "Natural Buffalo Horn Toggle") {
       images.push({
         type: "photo",
         url: Buffalo_horn_toggle1,
@@ -909,6 +901,59 @@ export const getProductImages = (product: Product) => {
       images.push({
         type: "photo",
         url: Cattle_horn_toggle3,
+        label: "Saturated Organic Crafted Blanks"
+      });
+    } 
+  } else if (product.category === "Horn Tip") {
+    if (product.grainPattern === "Natural Buffalo Horn Tip") {
+        images.push({
+          type: "photo",
+          url: Buffalo_horn1,
+          label: "Bespoke Crimson Fabric Backdrop"
+        });
+        images.push({
+          type: "photo",
+          url: Buffalo_horn2,
+          label: "Polished Crimson Obsidian Shell"
+        });
+        images.push({
+          type: "photo",
+          url: Buffalo_horn3,
+          label: "Polished Crimson Obsidian Shell3"
+        });
+    } else if (product.grainPattern === "Natural Cattle Horn Tip") {
+        images.push({
+          type: "photo",
+          url: Cattle_horn1,
+          label: "Bespoke Crimson Fabric Backdrop"
+        });
+        images.push({
+          type: "photo",
+          url: Cattle_horn2,
+          label: "Polished Crimson Obsidian Shell"
+        });
+        images.push({
+          type: "photo",
+          url: Cattle_horn3,
+          label: "Polished Crimson Obsidian Shell"
+        });
+    
+    } 
+  } else {
+    if (product.grainPattern === "Natural Horn Grain") {
+      images.push({
+        type: "photo",
+        url: HornToggle1,
+        label: "Saturated Organic Crafted Blanks"
+      });
+      images.push({
+        type: "photo",
+        url: HornToggle2,
+        label: "Saturated Organic Crafted Blanks"
+      });
+      images.push({
+        type: "photo",
+        url: HornToggle3,
         label: "Saturated Organic Crafted Blanks"
       });
     } else if (product.grainPattern === "Natural Horn Swirl") {
@@ -942,76 +987,6 @@ export const getProductImages = (product: Product) => {
         type: "photo",
         url: horn_roll3,
         label: "Polished Crimson Obsidian Shell3"
-      });
-    } else if (product.grainPattern === "Natural Buffalo Horn Tip") {
-      images.push({
-        type: "photo",
-        url: Buffalo_horn1,
-        label: "Bespoke Crimson Fabric Backdrop"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn2,
-        label: "Polished Crimson Obsidian Shell"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn3,
-        label: "Polished Crimson Obsidian Shell3"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn4,
-        label: "Polished Crimson Obsidian Shell4"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn5,
-        label: "Polished Crimson Obsidian Shell5"
-      });
-      images.push({
-        type: "photo",
-        url: Buffalo_horn6,
-        label: "Polished Crimson Obsidian Shell6"
-      });
-    } else if (product.grainPattern === "Natural Cattle Horn Tip") {
-      images.push({
-        type: "photo",
-        url: Cattle_horn1,
-        label: "Bespoke Crimson Fabric Backdrop"
-      });
-      images.push({
-        type: "photo",
-        url: Cattle_horn2,
-        label: "Polished Crimson Obsidian Shell"
-      });
-      images.push({
-        type: "photo",
-        url: Cattle_horn3,
-        label: "Polished Crimson Obsidian Shell"
-      });
-   
-    } else if (product.grainPattern === "Natural Bone Plates") {
-      images.push({
-        type: "photo",
-        url: bone_plate1,
-        label: "Bespoke Crimson Fabric Backdrop1"
-      });
-      images.push({
-        type: "photo",
-        url: bone_plate2,
-        label: "Polished Crimson Obsidian Shell2"
-      });
-    } else if (product.grainPattern === "Cattle Horn Color Plate") {
-      images.push({
-        type: "photo",
-        url: Cattle_color_plate1,
-        label: "Speckled White Marble Core Plate"
-      });
-      images.push({
-        type: "photo",
-        url: Cattle_color_plate2,
-        label: "Speckled White Marble Core Plate"
       });
     } else if (product.grainPattern === "Natural Dog Food Bowl") {
       images.push({

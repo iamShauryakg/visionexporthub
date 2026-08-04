@@ -70,7 +70,7 @@ export default function Header({
             onClick={(e) => {
               e.preventDefault();
               if (onNavigate) {
-                onNavigate("/", "#hero");
+                onNavigate("home", "#hero");
               }
             }}
             className="flex items-center space-x-3 group" 
@@ -129,7 +129,7 @@ export default function Header({
               onClick={(e) => {
                 if (onNavigate) {
                   e.preventDefault();
-                  onNavigate("/", "#hero");
+                  onNavigate("home", "#hero");
                 }
               }}
               className={`relative py-1 hover:text-amber-500 transition-colors duration-300 group ${activeView === "home" ? "text-amber-500" : ""}`}

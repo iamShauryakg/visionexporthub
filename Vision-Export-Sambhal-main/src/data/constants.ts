@@ -6,6 +6,10 @@ import Heroimage1 from "../images/heroIMG/hero.png";
 import Heroimage2 from "../images/heroIMG/hero2.png";
 import Heroimage3 from "../images/heroIMG/hero3.png";
 
+import threeDimg1 from "../images/3d image/1.png"
+import threeDimg2 from "../images/3d image/2.png"
+import threeDimg3 from "../images/3d image/3.png"
+
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
@@ -37,7 +41,7 @@ export const HERO_3D_MATERIALS: Hero3DMaterial[] = [
     finish: "High Gloss Hand Polished Veneer",
     b2bMoq: "200 KG",
     source: "Sambhal Craft Hub, UP, India",
-    image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=1000&q=80",
+    image: threeDimg1,
     colors: {
       front: "linear-gradient(180deg, #f59e0b 0%, #d97706 40%, #b45309 80%, #78350f 100%)",
       back: "linear-gradient(180deg, #d97706 0%, #b45309 60%, #78350f 100%)",
@@ -56,7 +60,7 @@ export const HERO_3D_MATERIALS: Hero3DMaterial[] = [
     finish: "Silk Smooth Satin Polish",
     b2bMoq: "200 KG",
     source: "Indo-Gangetic Organic Herds",
-    image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=1000&q=80",
+    image: threeDimg2,
     colors: {
       front: "linear-gradient(180deg, #7f1d1d 0%, #991b1b 30%, #450a0a 70%, #292524 100%)",
       back: "linear-gradient(180deg, #991b1b 0%, #450a0a 100%)",
@@ -75,7 +79,7 @@ export const HERO_3D_MATERIALS: Hero3DMaterial[] = [
     finish: "Mirror Polished Dual Tone",
     b2bMoq: "200 KG",
     source: "Selected Sambhal Reserve Horns",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=80",
+    image: threeDimg3,
     colors: {
       front: "linear-gradient(90deg, #18181b 0%, #27272a 22%, #d97706 45%, #f59e0b 70%, #b45309 100%)",
       back: "linear-gradient(90deg, #27272a 0%, #b45309 50%, #d97706 100%)",

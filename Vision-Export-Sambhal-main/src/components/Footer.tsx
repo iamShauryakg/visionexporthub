@@ -16,6 +16,7 @@ import {
   PenTool,
   Twitter
 } from "lucide-react";
+import { FaPinterest } from "react-icons/fa";
 import Logo from "../images/logo/vision logo.png";
 
 interface FooterProps {
@@ -224,6 +225,15 @@ export default function Footer({ whatsappNumber, onOpenLegal, onOpenConfig, onNa
               >
                 <Linkedin className="w-3.5 h-3.5 text-amber-500 group-hover:scale-110 transition-transform" />
                 <span className="text-[9px] font-mono text-zinc-300 group-hover:text-white uppercase font-bold tracking-wider">LinkedIn</span>
+              </a>
+              <a 
+                href="https://pin.it/7zgktYT6L" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center space-x-2 px-3 py-1.5 bg-zinc-950 hover:bg-zinc-900 border border-zinc-850 hover:border-amber-500 transition-colors group cursor-pointer"
+              >
+                <FaPinterest className="w-3.5 h-3.5 text-amber-500 group-hover:scale-110 transition-transform" />
+                <span className="text-[9px] font-mono text-zinc-300 group-hover:text-white uppercase font-bold tracking-wider">Pinterest</span>
               </a>
 
               <a 

@@ -299,12 +299,9 @@ Please send detailed FOB pricing, bulk availability, and physical sample terms.`
                 {isSelected && (
                   <Check className="w-4 h-4 text-amber-500 flex-shrink-0" />
                 )}
-
               </button>
             );
-
           })}
-
         </div>
 
            {/* Technical Specs Box */}
